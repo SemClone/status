@@ -2,15 +2,6 @@
 
 A GitHub Pages dashboard that tracks download statistics for all SEMCL.ONE packages published on PyPI.
 
-## Features
-
-- **Daily automated updates** via GitHub Actions
-- **Interactive charts** showing download trends over the last 180 days
-- **Python version distribution** across all packages
-- **Operating system breakdown** of downloads
-- **Summary cards** for each package with recent download counts
-- **Responsive design** works on desktop and mobile
-
 ## Quick Start
 
 ### 1. Initial Setup
