@@ -19,6 +19,11 @@ function formatNumber(num) {
 async function loadStats() {
     try {
         const response = await fetch('data/stats.json');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         statsData = await response.json();
 
         updateLastUpdated(statsData.last_updated);
@@ -29,8 +34,9 @@ async function loadStats() {
         renderSystemsChart(statsData.packages);
     } catch (error) {
         console.error('Error loading stats:', error);
+        const errorMsg = `Error loading statistics: ${error.message}. Please check the browser console for details.`;
         document.getElementById('summaryCards').innerHTML =
-            '<p style="color: red;">Error loading statistics. Please try again later.</p>';
+            `<p style="color: red;">${errorMsg}</p>`;
     }
 }
 
