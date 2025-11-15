@@ -51,13 +51,7 @@ function updateLastUpdated(timestamp) {
         minute: '2-digit',
         timeZoneName: 'short'
     });
-    const dateOnly = date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
     document.getElementById('lastUpdated').textContent = `Last updated: ${formatted}`;
-    document.getElementById('footerUpdated').textContent = `Updated on ${dateOnly}`;
 }
 
 // Render summary cards
