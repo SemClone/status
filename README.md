@@ -1,8 +1,6 @@
-# SEMCL.ONE PyPI Stats Dashboard
+# STATUS - PyPI Download Metrics for SEMCL.ONE tools
 
 A GitHub Pages dashboard that tracks download statistics for all SEMCL.ONE packages published on PyPI.
-
-View the live dashboard at: [https://semclone.github.io/status/](https://semclone.github.io/status/)
 
 For setup and customization instructions, see [INSTRUCTIONS.md](INSTRUCTIONS.md).
 
