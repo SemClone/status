@@ -1,0 +1,51 @@
+name: Update PyPI Stats
+
+on:
+  # Run daily at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run on push to main (for testing)
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch PyPI statistics
+        run: python fetch_stats.py
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet docs/data/stats.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/data/stats.json
+          git commit -m "Update PyPI stats - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
+
+      - name: No changes
+        if: steps.check_changes.outputs.changed != 'true'
+        run: echo "No changes to stats.json - skipping commit"

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMCL.ONE - PyPI Download Statistics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📊 SEMCL.ONE PyPI Statistics</h1>
+            <p class="subtitle">Download metrics for all SEMCL.ONE packages</p>
+            <p class="last-updated" id="lastUpdated">Loading...</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Summary Cards -->
+        <section class="summary-section">
+            <h2>Download Summary</h2>
+            <div class="cards-grid" id="summaryCards">
+                Loading...
+            </div>
+        </section>
+
+        <!-- Overall Trends Chart -->
+        <section class="chart-section">
+            <h2>Download Trends (Last 180 Days)</h2>
+            <div class="chart-container">
+                <canvas id="trendsChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Package Details -->
+        <section class="packages-section">
+            <h2>Package Details</h2>
+            <div id="packageDetails">
+                Loading...
+            </div>
+        </section>
+
+        <!-- Python Versions Chart -->
+        <section class="chart-section">
+            <h2>Python Versions Distribution</h2>
+            <div class="chart-container">
+                <canvas id="pythonVersionsChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Operating Systems Chart -->
+        <section class="chart-section">
+            <h2>Operating Systems Distribution</h2>
+            <div class="chart-container">
+                <canvas id="systemsChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                Data from <a href="https://pypistats.org/" target="_blank">pypistats.org</a> |
+                <a href="https://semcl.one" target="_blank">SEMCL.ONE</a> |
+                Updated daily via GitHub Actions
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
