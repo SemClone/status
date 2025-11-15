@@ -2,7 +2,7 @@
 
 A GitHub Pages dashboard that tracks download statistics for all SEMCL.ONE packages published on PyPI.
 
-## 📊 Features
+## Features
 
 - **Daily automated updates** via GitHub Actions
 - **Interactive charts** showing download trends over the last 180 days
@@ -11,7 +11,7 @@ A GitHub Pages dashboard that tracks download statistics for all SEMCL.ONE packa
 - **Summary cards** for each package with recent download counts
 - **Responsive design** works on desktop and mobile
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Initial Setup
 
@@ -41,7 +41,7 @@ The GitHub Actions workflow (`.github/workflows/update-stats.yml`) automatically
 - Commits updated data if changes detected
 - Can be manually triggered from the Actions tab
 
-## 📦 Tracked Packages
+## Tracked Packages
 
 The dashboard tracks these SEMCL.ONE packages:
 
@@ -55,7 +55,7 @@ The dashboard tracks these SEMCL.ONE packages:
 - **ospac** - Open Source Policy as Code engine
 - **mcp-semclone** - MCP server for OSS compliance analysis
 
-## 🛠️ Manual Updates
+## Manual Updates
 
 To manually update the statistics:
 
@@ -71,7 +71,7 @@ git push
 
 Or use the **Actions** tab on GitHub to trigger the workflow manually.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -90,7 +90,7 @@ Or use the **Actions** tab on GitHub to trigger the workflow manually.
 └── README.md
 ```
 
-## 🔧 Customization
+## Customization
 
 ### Adding/Removing Packages
 
@@ -119,7 +119,7 @@ schedule:
 
 Modify `docs/css/style.css` to customize colors, fonts, and layout.
 
-## 📊 Data Source
+## Data Source
 
 All data is fetched from [pypistats.org](https://pypistats.org/) API:
 - No API key required
@@ -127,6 +127,6 @@ All data is fetched from [pypistats.org](https://pypistats.org/) API:
 - Data updated daily
 - Historical data retained for 180 days
 
-## 📄 License
+## License
 
 See [LICENSE](LICENSE) file for details.
