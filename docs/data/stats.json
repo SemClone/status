@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-17T22:03:59.204778Z",
+  "last_updated": "2025-11-17T22:04:34.977305Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -4158,7 +4158,20 @@
     },
     "vulnq": {
       "name": "vulnq",
-      "recent": {},
+      "recent": {
+        "data": {
+          "last_day": 16,
+          "last_month": 640,
+          "last_week": 224,
+          "_discrepancy_warning": {
+            "api_value": 0,
+            "calculated_value": 16,
+            "message": "last_day calculated from /overall data due to API staleness"
+          }
+        },
+        "package": "vulnq",
+        "type": "recent_downloads"
+      },
       "overall": {
         "data": [
           {
