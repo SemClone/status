@@ -29,7 +29,6 @@ async function loadStats() {
         updateLastUpdated(statsData.last_updated);
         renderSummaryCards(statsData.packages);
         renderTrendsChart(statsData.packages);
-        renderPackageDetails(statsData.packages);
         renderPythonVersionsChart(statsData.packages);
         renderSystemsChart(statsData.packages);
     } catch (error) {
@@ -170,38 +169,6 @@ function renderTrendsChart(packages) {
             }
         }
     });
-}
-
-// Render package details section
-function renderPackageDetails(packages) {
-    const container = document.getElementById('packageDetails');
-    let html = '';
-
-    for (const [pkgName, pkgData] of Object.entries(packages)) {
-        const recent = pkgData.recent?.data || {};
-
-        html += `
-            <div class="package-detail">
-                <h3>${pkgName}</h3>
-                <div class="stats-grid">
-                    <div class="stat-row">
-                        <span class="stat-label">Last Day:</span>
-                        <span class="stat-value">${formatNumber(recent.last_day)}</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Last Week:</span>
-                        <span class="stat-value">${formatNumber(recent.last_week)}</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Last Month:</span>
-                        <span class="stat-value">${formatNumber(recent.last_month)}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    container.innerHTML = html;
 }
 
 // Render Python versions chart

@@ -7,6 +7,7 @@ Data is fetched from pypistats.org API and saved as JSON for the dashboard.
 import json
 import urllib.request
 import urllib.error
+import time
 from datetime import datetime, timezone, timedelta
 from typing import Dict, List, Any, Optional
 
@@ -26,17 +27,29 @@ PACKAGES = [
 BASE_URL = "https://pypistats.org/api/packages"
 
 
-def fetch_json(url: str) -> Dict[str, Any]:
-    """Fetch JSON data from a URL."""
-    try:
-        with urllib.request.urlopen(url, timeout=30) as response:
-            return json.loads(response.read().decode())
-    except urllib.error.HTTPError as e:
-        print(f"HTTP Error {e.code} for {url}")
-        return {}
-    except Exception as e:
-        print(f"Error fetching {url}: {e}")
-        return {}
+def fetch_json(url: str, max_retries: int = 3) -> Dict[str, Any]:
+    """Fetch JSON data from a URL with retry logic for rate limiting."""
+    for attempt in range(max_retries):
+        try:
+            with urllib.request.urlopen(url, timeout=30) as response:
+                return json.loads(response.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code == 429:  # Rate limit
+                if attempt < max_retries - 1:
+                    wait_time = (attempt + 1) * 2  # Exponential backoff: 2s, 4s, 6s
+                    print(f"  Rate limited, retrying in {wait_time}s... (attempt {attempt + 1}/{max_retries})")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    print(f"  HTTP Error {e.code} for {url} (max retries reached)")
+                    return {}
+            else:
+                print(f"  HTTP Error {e.code} for {url}")
+                return {}
+        except Exception as e:
+            print(f"  Error fetching {url}: {e}")
+            return {}
+    return {}
 
 
 def fetch_recent_stats(package: str) -> Dict[str, Any]:
@@ -104,7 +117,9 @@ def main():
         print(f"Fetching stats for {package}...")
 
         recent = fetch_recent_stats(package)
+        time.sleep(0.5)  # Small delay to avoid rate limiting
         overall = fetch_overall_stats(package)
+        time.sleep(0.5)
 
         # Calculate last_day from overall data
         calculated_last_day = calculate_last_day_from_overall(overall)
