@@ -7,8 +7,8 @@ Data is fetched from pypistats.org API and saved as JSON for the dashboard.
 import json
 import urllib.request
 import urllib.error
-from datetime import datetime, timezone
-from typing import Dict, List, Any
+from datetime import datetime, timezone, timedelta
+from typing import Dict, List, Any, Optional
 
 # List of packages to track
 PACKAGES = [
@@ -63,6 +63,34 @@ def fetch_system_stats(package: str) -> Dict[str, Any]:
     return fetch_json(url)
 
 
+def calculate_last_day_from_overall(overall_data: Dict[str, Any]) -> Optional[int]:
+    """
+    Calculate last_day downloads from overall data.
+    Returns the sum of downloads from the most recent date in the data.
+    """
+    if not overall_data or "data" not in overall_data:
+        return None
+
+    data = overall_data["data"]
+    if not data:
+        return None
+
+    # Group downloads by date and sum across categories
+    date_downloads = {}
+    for entry in data:
+        date = entry.get("date")
+        downloads = entry.get("downloads", 0)
+        if date:
+            date_downloads[date] = date_downloads.get(date, 0) + downloads
+
+    if not date_downloads:
+        return None
+
+    # Get the most recent date
+    most_recent_date = max(date_downloads.keys())
+    return date_downloads[most_recent_date]
+
+
 def main():
     """Fetch all stats for all packages and save to JSON."""
     print(f"Fetching stats for {len(PACKAGES)} packages...")
@@ -75,10 +103,31 @@ def main():
     for package in PACKAGES:
         print(f"Fetching stats for {package}...")
 
+        recent = fetch_recent_stats(package)
+        overall = fetch_overall_stats(package)
+
+        # Calculate last_day from overall data
+        calculated_last_day = calculate_last_day_from_overall(overall)
+
+        # Check for discrepancy and fix it
+        api_last_day = None
+        if recent and "data" in recent:
+            api_last_day = recent["data"].get("last_day", 0)
+
+            # If we have a calculated value and it differs from the API, use ours
+            if calculated_last_day is not None and api_last_day != calculated_last_day:
+                print(f"  ⚠️  Discrepancy detected: API reports {api_last_day}, calculated {calculated_last_day}")
+                recent["data"]["last_day"] = calculated_last_day
+                recent["data"]["_discrepancy_warning"] = {
+                    "api_value": api_last_day,
+                    "calculated_value": calculated_last_day,
+                    "message": "last_day calculated from /overall data due to API staleness"
+                }
+
         package_stats = {
             "name": package,
-            "recent": fetch_recent_stats(package),
-            "overall": fetch_overall_stats(package),
+            "recent": recent,
+            "overall": overall,
             "python_versions": fetch_python_versions(package),
             "system": fetch_system_stats(package),
         }
