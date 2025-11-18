@@ -2,11 +2,12 @@
 
 let statsData = null;
 
-// Color palette for charts
+// Color palette for charts - SEMCL.ONE theme
 const COLORS = [
-    '#2563eb', '#3b82f6', '#60a5fa', '#93c5fd',
-    '#10b981', '#34d399', '#6ee7b7', '#a7f3d0',
-    '#f59e0b', '#fbbf24', '#fcd34d', '#fde68a'
+    '#9B0002', '#C50003', '#7A0001', '#E60004',
+    '#B85C00', '#D47300', '#8B4500', '#FF8C00',
+    '#0A6E0A', '#0D8F0D', '#085808', '#10B010',
+    '#666666', '#808080', '#4D4D4D', '#999999'
 ];
 
 // Format number with commas

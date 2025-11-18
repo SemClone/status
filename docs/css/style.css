@@ -1,12 +1,15 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --background: #f8fafc;
+    --primary-color: #9B0002;
+    --primary-dark: #7A0001;
+    --primary-light: #C50003;
+    --background: #ffffff;
+    --light-gray: #f5f5f5;
     --card-background: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
     --border-color: #e2e8f0;
-    --success-color: #10b981;
+    --success-color: #0A6E0A;
+    --warning-color: #B85C00;
     --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
@@ -22,7 +25,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--background);
+    background-color: var(--light-gray);
     color: var(--text-primary);
     line-height: 1.6;
 }
@@ -35,7 +38,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
     padding: 40px 0;
     margin-bottom: 40px;
@@ -87,6 +90,7 @@ header h1 {
 .package-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-left-color: var(--primary-light);
 }
 
 .package-card h3 {
@@ -102,6 +106,7 @@ header h1 {
 
 .package-card a:hover {
     text-decoration: underline;
+    color: var(--primary-light);
 }
 
 .stat-row {
