@@ -149,15 +149,31 @@ def main():
         print(f"Fetching stats for {package}...")
 
         recent = fetch_recent_stats(package)
-        time.sleep(0.5)  # Small delay to avoid rate limiting
+        time.sleep(1.0)  # Increased delay to avoid rate limiting
         overall = fetch_overall_stats(package)
-        time.sleep(0.5)
+        time.sleep(1.0)
 
         # Calculate all metrics from overall data
         calculated_metrics = calculate_metrics_from_overall(overall)
 
-        # Check for discrepancies and fix them
-        if recent and "data" in recent:
+        # If recent failed but we have overall data, create recent from calculated metrics
+        if not recent or "data" not in recent:
+            if any(v is not None for v in calculated_metrics.values()):
+                print(f"  ℹ️  Using calculated metrics (API unavailable)")
+                recent = {
+                    "data": {
+                        "last_day": calculated_metrics.get("last_day", 0),
+                        "last_week": calculated_metrics.get("last_week", 0),
+                        "last_month": calculated_metrics.get("last_month", 0)
+                    },
+                    "package": package,
+                    "type": "recent_downloads"
+                }
+                recent["data"]["_fallback_warning"] = {
+                    "message": "All metrics calculated from /overall data (API unavailable)"
+                }
+        else:
+            # Check for discrepancies and fix them
             discrepancies = {}
 
             for metric in ["last_day", "last_week", "last_month"]:
