@@ -17,6 +17,7 @@ PACKAGES = [
     "binarysniffer",
     "osslili",
     "purl2notices",
+    "ossnotices",
     "upmex",
     "src2purl",
     "vulnq",
