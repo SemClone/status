@@ -76,17 +76,23 @@ def fetch_system_stats(package: str) -> Dict[str, Any]:
     return fetch_json(url)
 
 
-def calculate_last_day_from_overall(overall_data: Dict[str, Any]) -> Optional[int]:
+def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Optional[int]]:
     """
-    Calculate last_day downloads from overall data.
-    Returns the sum of downloads from the most recent date in the data.
+    Calculate last_day, last_week, and last_month from overall data.
+    Returns a dict with calculated values.
     """
+    result = {
+        "last_day": None,
+        "last_week": None,
+        "last_month": None
+    }
+
     if not overall_data or "data" not in overall_data:
-        return None
+        return result
 
     data = overall_data["data"]
     if not data:
-        return None
+        return result
 
     # Group downloads by date and sum across categories
     date_downloads = {}
@@ -97,11 +103,37 @@ def calculate_last_day_from_overall(overall_data: Dict[str, Any]) -> Optional[in
             date_downloads[date] = date_downloads.get(date, 0) + downloads
 
     if not date_downloads:
-        return None
+        return result
 
     # Get the most recent date
-    most_recent_date = max(date_downloads.keys())
-    return date_downloads[most_recent_date]
+    sorted_dates = sorted(date_downloads.keys(), reverse=True)
+    if not sorted_dates:
+        return result
+
+    most_recent_date = sorted_dates[0]
+
+    # Calculate last_day
+    result["last_day"] = date_downloads[most_recent_date]
+
+    # Calculate last_week (last 7 days including most recent)
+    week_total = 0
+    for i, date in enumerate(sorted_dates):
+        if i < 7:
+            week_total += date_downloads[date]
+        else:
+            break
+    result["last_week"] = week_total
+
+    # Calculate last_month (last 30 days including most recent)
+    month_total = 0
+    for i, date in enumerate(sorted_dates):
+        if i < 30:
+            month_total += date_downloads[date]
+        else:
+            break
+    result["last_month"] = month_total
+
+    return result
 
 
 def main():
@@ -121,22 +153,32 @@ def main():
         overall = fetch_overall_stats(package)
         time.sleep(0.5)
 
-        # Calculate last_day from overall data
-        calculated_last_day = calculate_last_day_from_overall(overall)
+        # Calculate all metrics from overall data
+        calculated_metrics = calculate_metrics_from_overall(overall)
 
-        # Check for discrepancy and fix it
-        api_last_day = None
+        # Check for discrepancies and fix them
         if recent and "data" in recent:
-            api_last_day = recent["data"].get("last_day", 0)
+            discrepancies = {}
 
-            # If we have a calculated value and it differs from the API, use ours
-            if calculated_last_day is not None and api_last_day != calculated_last_day:
-                print(f"  ⚠️  Discrepancy detected: API reports {api_last_day}, calculated {calculated_last_day}")
-                recent["data"]["last_day"] = calculated_last_day
+            for metric in ["last_day", "last_week", "last_month"]:
+                api_value = recent["data"].get(metric, 0)
+                calculated_value = calculated_metrics.get(metric)
+
+                if calculated_value is not None and api_value != calculated_value:
+                    discrepancies[metric] = {
+                        "api_value": api_value,
+                        "calculated_value": calculated_value
+                    }
+                    recent["data"][metric] = calculated_value
+
+            # Report discrepancies
+            if discrepancies:
+                disc_msgs = [f"{k}({v['api_value']}→{v['calculated_value']})"
+                            for k, v in discrepancies.items()]
+                print(f"  ⚠️  Discrepancy: {', '.join(disc_msgs)}")
                 recent["data"]["_discrepancy_warning"] = {
-                    "api_value": api_last_day,
-                    "calculated_value": calculated_last_day,
-                    "message": "last_day calculated from /overall data due to API staleness"
+                    "discrepancies": discrepancies,
+                    "message": "Metrics calculated from /overall data due to API staleness"
                 }
 
         package_stats = {
