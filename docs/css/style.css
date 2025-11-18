@@ -126,6 +126,13 @@ header h1 {
     color: var(--text-primary);
 }
 
+.stat-detail {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-left: 4px;
+}
+
 /* Charts */
 .chart-section {
     background: var(--card-background);

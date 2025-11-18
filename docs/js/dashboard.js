@@ -64,20 +64,24 @@ function renderSummaryCards(packages) {
         const lastWeek = recent.last_week || 0;
         const lastMonth = recent.last_month || 0;
 
+        const lastDayWithout = recent.last_day_without_mirrors || 0;
+        const lastWeekWithout = recent.last_week_without_mirrors || 0;
+        const lastMonthWithout = recent.last_month_without_mirrors || 0;
+
         html += `
             <div class="package-card">
                 <h3><a href="https://pypi.org/project/${pkgName}/" target="_blank">${pkgName}</a></h3>
                 <div class="stat-row">
                     <span class="stat-label">Last Day:</span>
-                    <span class="stat-value">${formatNumber(lastDay)}</span>
+                    <span class="stat-value">${formatNumber(lastDay)} <span class="stat-detail">(${formatNumber(lastDayWithout)} organic)</span></span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Last Week:</span>
-                    <span class="stat-value">${formatNumber(lastWeek)}</span>
+                    <span class="stat-value">${formatNumber(lastWeek)} <span class="stat-detail">(${formatNumber(lastWeekWithout)} organic)</span></span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Last Month:</span>
-                    <span class="stat-value">${formatNumber(lastMonth)}</span>
+                    <span class="stat-value">${formatNumber(lastMonth)} <span class="stat-detail">(${formatNumber(lastMonthWithout)} organic)</span></span>
                 </div>
             </div>
         `;

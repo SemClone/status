@@ -76,15 +76,21 @@ def fetch_system_stats(package: str) -> Dict[str, Any]:
     return fetch_json(url)
 
 
-def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Optional[int]]:
+def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Calculate last_day, last_week, and last_month from overall data.
-    Returns a dict with calculated values.
+    Returns a dict with calculated values for both with_mirrors and without_mirrors.
     """
     result = {
         "last_day": None,
         "last_week": None,
-        "last_month": None
+        "last_month": None,
+        "last_day_with_mirrors": None,
+        "last_week_with_mirrors": None,
+        "last_month_with_mirrors": None,
+        "last_day_without_mirrors": None,
+        "last_week_without_mirrors": None,
+        "last_month_without_mirrors": None
     }
 
     if not overall_data or "data" not in overall_data:
@@ -94,44 +100,48 @@ def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Op
     if not data:
         return result
 
-    # Group downloads by date and sum across categories
-    date_downloads = {}
+    # Group downloads by date and category
+    date_downloads_all = {}
+    date_downloads_with = {}
+    date_downloads_without = {}
+
     for entry in data:
         date = entry.get("date")
         downloads = entry.get("downloads", 0)
-        if date:
-            date_downloads[date] = date_downloads.get(date, 0) + downloads
+        category = entry.get("category", "")
 
-    if not date_downloads:
+        if date:
+            # Total (all categories)
+            date_downloads_all[date] = date_downloads_all.get(date, 0) + downloads
+
+            # Split by category
+            if category == "with_mirrors":
+                date_downloads_with[date] = date_downloads_with.get(date, 0) + downloads
+            elif category == "without_mirrors":
+                date_downloads_without[date] = date_downloads_without.get(date, 0) + downloads
+
+    if not date_downloads_all:
         return result
 
-    # Get the most recent date
-    sorted_dates = sorted(date_downloads.keys(), reverse=True)
+    # Get the most recent dates
+    sorted_dates = sorted(date_downloads_all.keys(), reverse=True)
     if not sorted_dates:
         return result
 
-    most_recent_date = sorted_dates[0]
+    # Calculate metrics for all categories combined
+    result["last_day"] = date_downloads_all[sorted_dates[0]]
+    result["last_week"] = sum(date_downloads_all.get(d, 0) for d in sorted_dates[:7])
+    result["last_month"] = sum(date_downloads_all.get(d, 0) for d in sorted_dates[:30])
 
-    # Calculate last_day
-    result["last_day"] = date_downloads[most_recent_date]
+    # Calculate metrics for with_mirrors
+    result["last_day_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:1])
+    result["last_week_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:7])
+    result["last_month_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:30])
 
-    # Calculate last_week (last 7 days including most recent)
-    week_total = 0
-    for i, date in enumerate(sorted_dates):
-        if i < 7:
-            week_total += date_downloads[date]
-        else:
-            break
-    result["last_week"] = week_total
-
-    # Calculate last_month (last 30 days including most recent)
-    month_total = 0
-    for i, date in enumerate(sorted_dates):
-        if i < 30:
-            month_total += date_downloads[date]
-        else:
-            break
-    result["last_month"] = month_total
+    # Calculate metrics for without_mirrors
+    result["last_day_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:1])
+    result["last_week_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:7])
+    result["last_month_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:30])
 
     return result
 
@@ -164,7 +174,13 @@ def main():
                     "data": {
                         "last_day": calculated_metrics.get("last_day", 0),
                         "last_week": calculated_metrics.get("last_week", 0),
-                        "last_month": calculated_metrics.get("last_month", 0)
+                        "last_month": calculated_metrics.get("last_month", 0),
+                        "last_day_with_mirrors": calculated_metrics.get("last_day_with_mirrors", 0),
+                        "last_week_with_mirrors": calculated_metrics.get("last_week_with_mirrors", 0),
+                        "last_month_with_mirrors": calculated_metrics.get("last_month_with_mirrors", 0),
+                        "last_day_without_mirrors": calculated_metrics.get("last_day_without_mirrors", 0),
+                        "last_week_without_mirrors": calculated_metrics.get("last_week_without_mirrors", 0),
+                        "last_month_without_mirrors": calculated_metrics.get("last_month_without_mirrors", 0)
                     },
                     "package": package,
                     "type": "recent_downloads"
@@ -186,6 +202,14 @@ def main():
                         "calculated_value": calculated_value
                     }
                     recent["data"][metric] = calculated_value
+
+            # Always add mirror-specific metrics
+            recent["data"]["last_day_with_mirrors"] = calculated_metrics.get("last_day_with_mirrors", 0)
+            recent["data"]["last_week_with_mirrors"] = calculated_metrics.get("last_week_with_mirrors", 0)
+            recent["data"]["last_month_with_mirrors"] = calculated_metrics.get("last_month_with_mirrors", 0)
+            recent["data"]["last_day_without_mirrors"] = calculated_metrics.get("last_day_without_mirrors", 0)
+            recent["data"]["last_week_without_mirrors"] = calculated_metrics.get("last_week_without_mirrors", 0)
+            recent["data"]["last_month_without_mirrors"] = calculated_metrics.get("last_month_without_mirrors", 0)
 
             # Report discrepancies
             if discrepancies:
