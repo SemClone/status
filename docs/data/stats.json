@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T00:26:47.396903Z",
+  "last_updated": "2025-11-18T00:34:41.970088Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -2950,6 +2950,389 @@
           }
         ],
         "package": "purl2notices",
+        "type": "system_downloads"
+      }
+    },
+    "ossnotices": {
+      "name": "ossnotices",
+      "recent": {
+        "data": {
+          "last_day": 2,
+          "last_month": 745,
+          "last_week": 275,
+          "last_day_with_mirrors": 2,
+          "last_week_with_mirrors": 158,
+          "last_month_with_mirrors": 499,
+          "last_day_without_mirrors": 0,
+          "last_week_without_mirrors": 117,
+          "last_month_without_mirrors": 246,
+          "_discrepancy_warning": {
+            "discrepancies": {
+              "last_day": {
+                "api_value": 0,
+                "calculated_value": 2
+              },
+              "last_week": {
+                "api_value": 117,
+                "calculated_value": 275
+              },
+              "last_month": {
+                "api_value": 246,
+                "calculated_value": 745
+              }
+            },
+            "message": "Metrics calculated from /overall data due to API staleness"
+          }
+        },
+        "package": "ossnotices",
+        "type": "recent_downloads"
+      },
+      "overall": {
+        "data": [
+          {
+            "category": "with_mirrors",
+            "date": "2025-10-30",
+            "downloads": 258
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-10-31",
+            "downloads": 37
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-01",
+            "downloads": 11
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-02",
+            "downloads": 4
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-03",
+            "downloads": 4
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-04",
+            "downloads": 2
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-05",
+            "downloads": 10
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-06",
+            "downloads": 4
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-07",
+            "downloads": 2
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-08",
+            "downloads": 3
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-09",
+            "downloads": 6
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-10",
+            "downloads": 6
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-11",
+            "downloads": 18
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-12",
+            "downloads": 4
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-13",
+            "downloads": 38
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-14",
+            "downloads": 86
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-15",
+            "downloads": 4
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2025-11-16",
+            "downloads": 2
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-10-30",
+            "downloads": 96
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-10-31",
+            "downloads": 23
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-01",
+            "downloads": 4
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-03",
+            "downloads": 2
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-06",
+            "downloads": 2
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-07",
+            "downloads": 2
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-11",
+            "downloads": 2
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-13",
+            "downloads": 31
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-14",
+            "downloads": 82
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2025-11-15",
+            "downloads": 2
+          }
+        ],
+        "package": "ossnotices",
+        "type": "overall_downloads"
+      },
+      "python_versions": {
+        "data": [
+          {
+            "category": "3.10",
+            "date": "2025-10-30",
+            "downloads": 8
+          },
+          {
+            "category": "3.10",
+            "date": "2025-11-13",
+            "downloads": 3
+          },
+          {
+            "category": "3.10",
+            "date": "2025-11-14",
+            "downloads": 8
+          },
+          {
+            "category": "3.11",
+            "date": "2025-10-30",
+            "downloads": 4
+          },
+          {
+            "category": "3.11",
+            "date": "2025-10-31",
+            "downloads": 12
+          },
+          {
+            "category": "3.11",
+            "date": "2025-11-13",
+            "downloads": 24
+          },
+          {
+            "category": "3.11",
+            "date": "2025-11-14",
+            "downloads": 64
+          },
+          {
+            "category": "3.12",
+            "date": "2025-10-30",
+            "downloads": 2
+          },
+          {
+            "category": "3.12",
+            "date": "2025-11-13",
+            "downloads": 2
+          },
+          {
+            "category": "3.12",
+            "date": "2025-11-14",
+            "downloads": 10
+          },
+          {
+            "category": "3.13",
+            "date": "2025-11-07",
+            "downloads": 2
+          },
+          {
+            "category": "3.14",
+            "date": "2025-11-13",
+            "downloads": 2
+          },
+          {
+            "category": "3.8",
+            "date": "2025-10-31",
+            "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2025-10-30",
+            "downloads": 82
+          },
+          {
+            "category": "null",
+            "date": "2025-10-31",
+            "downloads": 10
+          },
+          {
+            "category": "null",
+            "date": "2025-11-01",
+            "downloads": 4
+          },
+          {
+            "category": "null",
+            "date": "2025-11-03",
+            "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2025-11-06",
+            "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2025-11-11",
+            "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2025-11-15",
+            "downloads": 2
+          }
+        ],
+        "package": "ossnotices",
+        "type": "python_minor_downloads"
+      },
+      "system": {
+        "data": [
+          {
+            "category": "Darwin",
+            "date": "2025-10-30",
+            "downloads": 4
+          },
+          {
+            "category": "Darwin",
+            "date": "2025-10-31",
+            "downloads": 12
+          },
+          {
+            "category": "Darwin",
+            "date": "2025-11-13",
+            "downloads": 14
+          },
+          {
+            "category": "Darwin",
+            "date": "2025-11-14",
+            "downloads": 32
+          },
+          {
+            "category": "Linux",
+            "date": "2025-10-30",
+            "downloads": 10
+          },
+          {
+            "category": "Linux",
+            "date": "2025-10-31",
+            "downloads": 1
+          },
+          {
+            "category": "Linux",
+            "date": "2025-11-13",
+            "downloads": 15
+          },
+          {
+            "category": "Linux",
+            "date": "2025-11-14",
+            "downloads": 40
+          },
+          {
+            "category": "Windows",
+            "date": "2025-11-07",
+            "downloads": 2
+          },
+          {
+            "category": "Windows",
+            "date": "2025-11-13",
+            "downloads": 2
+          },
+          {
+            "category": "Windows",
+            "date": "2025-11-14",
+            "downloads": 10
+          },
+          {
+            "category": "null",
+            "date": "2025-10-30",
+            "downloads": 82
+          },
+          {
+            "category": "null",
+            "date": "2025-10-31",
+            "downloads": 10
+          },
+          {
+            "category": "null",
+            "date": "2025-11-01",
+            "downloads": 4
+          },
+          {
+            "category": "null",
+            "date": "2025-11-03",
+            "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2025-11-06",
+            "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2025-11-11",
+            "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2025-11-15",
+            "downloads": 2
+          }
+        ],
+        "package": "ossnotices",
         "type": "system_downloads"
       }
     },
