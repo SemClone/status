@@ -23,6 +23,7 @@ PACKAGES = [
     "vulnq",
     "ospac",
     "mcp-semclone",
+    "ossval",
 ]
 
 BASE_URL = "https://pypistats.org/api/packages"
