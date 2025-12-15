@@ -80,19 +80,22 @@ def fetch_system_stats(package: str) -> Dict[str, Any]:
 
 def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Calculate last_day, last_week, and last_month from overall data.
+    Calculate last_day, last_week, last_month, and total cumulative downloads from overall data.
     Returns a dict with calculated values for both with_mirrors and without_mirrors.
     """
     result = {
         "last_day": None,
         "last_week": None,
         "last_month": None,
+        "total": None,
         "last_day_with_mirrors": None,
         "last_week_with_mirrors": None,
         "last_month_with_mirrors": None,
+        "total_with_mirrors": None,
         "last_day_without_mirrors": None,
         "last_week_without_mirrors": None,
-        "last_month_without_mirrors": None
+        "last_month_without_mirrors": None,
+        "total_without_mirrors": None
     }
 
     if not overall_data or "data" not in overall_data:
@@ -134,16 +137,19 @@ def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, An
     result["last_day"] = date_downloads_all[sorted_dates[0]]
     result["last_week"] = sum(date_downloads_all.get(d, 0) for d in sorted_dates[:7])
     result["last_month"] = sum(date_downloads_all.get(d, 0) for d in sorted_dates[:30])
+    result["total"] = sum(date_downloads_all.values())
 
     # Calculate metrics for with_mirrors
     result["last_day_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:1])
     result["last_week_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:7])
     result["last_month_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:30])
+    result["total_with_mirrors"] = sum(date_downloads_with.values())
 
     # Calculate metrics for without_mirrors
     result["last_day_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:1])
     result["last_week_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:7])
     result["last_month_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:30])
+    result["total_without_mirrors"] = sum(date_downloads_without.values())
 
     return result
 
@@ -177,12 +183,15 @@ def main():
                         "last_day": calculated_metrics.get("last_day", 0),
                         "last_week": calculated_metrics.get("last_week", 0),
                         "last_month": calculated_metrics.get("last_month", 0),
+                        "total": calculated_metrics.get("total", 0),
                         "last_day_with_mirrors": calculated_metrics.get("last_day_with_mirrors", 0),
                         "last_week_with_mirrors": calculated_metrics.get("last_week_with_mirrors", 0),
                         "last_month_with_mirrors": calculated_metrics.get("last_month_with_mirrors", 0),
+                        "total_with_mirrors": calculated_metrics.get("total_with_mirrors", 0),
                         "last_day_without_mirrors": calculated_metrics.get("last_day_without_mirrors", 0),
                         "last_week_without_mirrors": calculated_metrics.get("last_week_without_mirrors", 0),
-                        "last_month_without_mirrors": calculated_metrics.get("last_month_without_mirrors", 0)
+                        "last_month_without_mirrors": calculated_metrics.get("last_month_without_mirrors", 0),
+                        "total_without_mirrors": calculated_metrics.get("total_without_mirrors", 0)
                     },
                     "package": package,
                     "type": "recent_downloads"
@@ -205,13 +214,16 @@ def main():
                     }
                     recent["data"][metric] = calculated_value
 
-            # Always add mirror-specific metrics
+            # Always add mirror-specific metrics and totals
             recent["data"]["last_day_with_mirrors"] = calculated_metrics.get("last_day_with_mirrors", 0)
             recent["data"]["last_week_with_mirrors"] = calculated_metrics.get("last_week_with_mirrors", 0)
             recent["data"]["last_month_with_mirrors"] = calculated_metrics.get("last_month_with_mirrors", 0)
+            recent["data"]["total_with_mirrors"] = calculated_metrics.get("total_with_mirrors", 0)
             recent["data"]["last_day_without_mirrors"] = calculated_metrics.get("last_day_without_mirrors", 0)
             recent["data"]["last_week_without_mirrors"] = calculated_metrics.get("last_week_without_mirrors", 0)
             recent["data"]["last_month_without_mirrors"] = calculated_metrics.get("last_month_without_mirrors", 0)
+            recent["data"]["total_without_mirrors"] = calculated_metrics.get("total_without_mirrors", 0)
+            recent["data"]["total"] = calculated_metrics.get("total", 0)
 
             # Report discrepancies
             if discrepancies:
