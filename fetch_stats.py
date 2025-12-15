@@ -261,7 +261,9 @@ def main():
             last_day = recent["data"].get("last_day", 0)
             last_week = recent["data"].get("last_week", 0)
             last_month = recent["data"].get("last_month", 0)
-            print(f"{package:20} - Day: {last_day:,} | Week: {last_week:,} | Month: {last_month:,}")
+            total = recent["data"].get("total", 0)
+            total_without_mirrors = recent["data"].get("total_without_mirrors", 0)
+            print(f"{package:20} - Day: {last_day:,} | Week: {last_week:,} | Month: {last_month:,} | Total: {total:,} (organic: {total_without_mirrors:,})")
         else:
             print(f"{package:20} - No data available")
 
