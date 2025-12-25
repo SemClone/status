@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-25T01:09:51.434379Z",
+  "last_updated": "2025-12-25T06:23:53.360236Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -24,11 +24,11 @@
                 "calculated_value": 4
               },
               "last_week": {
-                "api_value": 8,
+                "api_value": 7,
                 "calculated_value": 30
               },
               "last_month": {
-                "api_value": 81,
+                "api_value": 79,
                 "calculated_value": 233
               }
             },
@@ -1202,8 +1202,9 @@
       "recent": {
         "data": {
           "last_day": 16,
-          "last_month": 405,
           "last_week": 64,
+          "last_month": 405,
+          "total": 2121,
           "last_day_with_mirrors": 14,
           "last_week_with_mirrors": 48,
           "last_month_with_mirrors": 311,
@@ -1212,23 +1213,8 @@
           "last_week_without_mirrors": 16,
           "last_month_without_mirrors": 94,
           "total_without_mirrors": 688,
-          "total": 2121,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 2,
-                "calculated_value": 16
-              },
-              "last_week": {
-                "api_value": 14,
-                "calculated_value": 64
-              },
-              "last_month": {
-                "api_value": 90,
-                "calculated_value": 405
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "binarysniffer",
@@ -2546,11 +2532,11 @@
                 "calculated_value": 14
               },
               "last_week": {
-                "api_value": 24,
+                "api_value": 29,
                 "calculated_value": 94
               },
               "last_month": {
-                "api_value": 611,
+                "api_value": 342,
                 "calculated_value": 975
               }
             },
@@ -4432,11 +4418,11 @@
                 "calculated_value": 2
               },
               "last_week": {
-                "api_value": 12,
+                "api_value": 11,
                 "calculated_value": 54
               },
               "last_month": {
-                "api_value": 95,
+                "api_value": 90,
                 "calculated_value": 373
               }
             },
@@ -8908,7 +8894,7 @@
                 "calculated_value": 50
               },
               "last_month": {
-                "api_value": 62,
+                "api_value": 58,
                 "calculated_value": 285
               }
             },
@@ -9845,11 +9831,11 @@
                 "calculated_value": 4
               },
               "last_week": {
-                "api_value": 40,
+                "api_value": 35,
                 "calculated_value": 127
               },
               "last_month": {
-                "api_value": 127,
+                "api_value": 108,
                 "calculated_value": 831
               }
             },
@@ -11041,11 +11027,11 @@
                 "calculated_value": 13
               },
               "last_week": {
-                "api_value": 77,
+                "api_value": 80,
                 "calculated_value": 329
               },
               "last_month": {
-                "api_value": 143,
+                "api_value": 116,
                 "calculated_value": 1195
               }
             },
@@ -12072,11 +12058,11 @@
                 "calculated_value": 3
               },
               "last_week": {
-                "api_value": 7,
+                "api_value": 8,
                 "calculated_value": 73
               },
               "last_month": {
-                "api_value": 339,
+                "api_value": 340,
                 "calculated_value": 1358
               }
             },
