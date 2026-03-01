@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-01T12:05:34.839739Z",
+  "last_updated": "2026-03-01T18:05:06.497459Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -2292,8 +2292,9 @@
       "recent": {
         "data": {
           "last_day": 10,
-          "last_month": 419,
           "last_week": 80,
+          "last_month": 419,
+          "total": 5558,
           "last_day_with_mirrors": 7,
           "last_week_with_mirrors": 57,
           "last_month_with_mirrors": 312,
@@ -2302,23 +2303,8 @@
           "last_week_without_mirrors": 23,
           "last_month_without_mirrors": 107,
           "total_without_mirrors": 2222,
-          "total": 5558,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 3,
-                "calculated_value": 10
-              },
-              "last_week": {
-                "api_value": 23,
-                "calculated_value": 80
-              },
-              "last_month": {
-                "api_value": 102,
-                "calculated_value": 419
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "binarysniffer",
