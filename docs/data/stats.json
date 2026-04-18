@@ -1,38 +1,24 @@
 {
-  "last_updated": "2026-04-18T00:21:58.238659Z",
+  "last_updated": "2026-04-18T06:24:51.975104Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
       "recent": {
         "data": {
-          "last_day": 4,
-          "last_month": 355,
-          "last_week": 43,
-          "last_day_with_mirrors": 2,
-          "last_week_with_mirrors": 35,
-          "last_month_with_mirrors": 256,
-          "total_with_mirrors": 3350,
-          "last_day_without_mirrors": 2,
+          "last_day": 1,
+          "last_week": 42,
+          "last_month": 326,
+          "total": 5837,
+          "last_day_with_mirrors": 1,
+          "last_week_with_mirrors": 34,
+          "last_month_with_mirrors": 237,
+          "total_with_mirrors": 3351,
+          "last_day_without_mirrors": 0,
           "last_week_without_mirrors": 8,
-          "last_month_without_mirrors": 99,
+          "last_month_without_mirrors": 89,
           "total_without_mirrors": 2486,
-          "total": 5836,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 2,
-                "calculated_value": 4
-              },
-              "last_week": {
-                "api_value": 8,
-                "calculated_value": 43
-              },
-              "last_month": {
-                "api_value": 99,
-                "calculated_value": 355
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "purl2src",
@@ -819,6 +805,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 2
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 1
           },
           {
             "category": "without_mirrors",
@@ -3291,31 +3282,31 @@
       "name": "binarysniffer",
       "recent": {
         "data": {
-          "last_day": 14,
-          "last_month": 333,
-          "last_week": 55,
-          "last_day_with_mirrors": 11,
-          "last_week_with_mirrors": 40,
-          "last_month_with_mirrors": 242,
-          "total_with_mirrors": 3691,
-          "last_day_without_mirrors": 3,
-          "last_week_without_mirrors": 15,
-          "last_month_without_mirrors": 91,
+          "last_day": 5,
+          "last_month": 314,
+          "last_week": 57,
+          "last_day_with_mirrors": 5,
+          "last_week_with_mirrors": 43,
+          "last_month_with_mirrors": 229,
+          "total_with_mirrors": 3696,
+          "last_day_without_mirrors": 0,
+          "last_week_without_mirrors": 14,
+          "last_month_without_mirrors": 85,
           "total_without_mirrors": 2345,
-          "total": 6036,
+          "total": 6041,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 3,
-                "calculated_value": 14
+                "api_value": 0,
+                "calculated_value": 5
               },
               "last_week": {
-                "api_value": 15,
-                "calculated_value": 55
+                "api_value": 14,
+                "calculated_value": 57
               },
               "last_month": {
-                "api_value": 85,
-                "calculated_value": 333
+                "api_value": 79,
+                "calculated_value": 314
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -4120,6 +4111,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 11
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 5
           },
           {
             "category": "without_mirrors",
@@ -6732,20 +6728,34 @@
       "name": "osslili",
       "recent": {
         "data": {
-          "last_day": 20,
-          "last_week": 1519,
-          "last_month": 2731,
-          "total": 17879,
-          "last_day_with_mirrors": 17,
-          "last_week_with_mirrors": 798,
-          "last_month_with_mirrors": 1470,
-          "total_with_mirrors": 10404,
-          "last_day_without_mirrors": 3,
-          "last_week_without_mirrors": 721,
-          "last_month_without_mirrors": 1261,
-          "total_without_mirrors": 7475,
-          "_fallback_warning": {
-            "message": "All metrics calculated from /overall data (API unavailable)"
+          "last_day": 16,
+          "last_month": 2745,
+          "last_week": 711,
+          "last_day_with_mirrors": 15,
+          "last_week_with_mirrors": 394,
+          "last_month_with_mirrors": 1483,
+          "total_with_mirrors": 10419,
+          "last_day_without_mirrors": 1,
+          "last_week_without_mirrors": 317,
+          "last_month_without_mirrors": 1262,
+          "total_without_mirrors": 7476,
+          "total": 17895,
+          "_discrepancy_warning": {
+            "discrepancies": {
+              "last_day": {
+                "api_value": 1,
+                "calculated_value": 16
+              },
+              "last_week": {
+                "api_value": 317,
+                "calculated_value": 711
+              },
+              "last_month": {
+                "api_value": 1238,
+                "calculated_value": 2745
+              }
+            },
+            "message": "Metrics calculated from /overall data due to API staleness"
           }
         },
         "package": "osslili",
@@ -7589,6 +7599,11 @@
             "downloads": 17
           },
           {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 15
+          },
+          {
             "category": "without_mirrors",
             "date": "2025-10-28",
             "downloads": 149
@@ -8297,6 +8312,11 @@
             "category": "without_mirrors",
             "date": "2026-04-16",
             "downloads": 3
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-04-17",
+            "downloads": 1
           }
         ],
         "package": "osslili",
@@ -10088,6 +10108,11 @@
             "category": "null",
             "date": "2026-04-16",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-04-17",
+            "downloads": 1
           }
         ],
         "package": "osslili",
@@ -11499,6 +11524,11 @@
             "category": "null",
             "date": "2026-04-16",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-04-17",
+            "downloads": 1
           }
         ],
         "package": "osslili",
@@ -11509,34 +11539,20 @@
       "name": "purl2notices",
       "recent": {
         "data": {
-          "last_day": 4,
-          "last_month": 317,
-          "last_week": 48,
-          "last_day_with_mirrors": 2,
-          "last_week_with_mirrors": 34,
-          "last_month_with_mirrors": 223,
-          "total_with_mirrors": 4090,
-          "last_day_without_mirrors": 2,
-          "last_week_without_mirrors": 14,
+          "last_day": 1,
+          "last_week": 39,
+          "last_month": 312,
+          "total": 6811,
+          "last_day_with_mirrors": 1,
+          "last_week_with_mirrors": 30,
+          "last_month_with_mirrors": 218,
+          "total_with_mirrors": 4091,
+          "last_day_without_mirrors": 0,
+          "last_week_without_mirrors": 9,
           "last_month_without_mirrors": 94,
           "total_without_mirrors": 2720,
-          "total": 6810,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 2,
-                "calculated_value": 4
-              },
-              "last_week": {
-                "api_value": 9,
-                "calculated_value": 48
-              },
-              "last_month": {
-                "api_value": 88,
-                "calculated_value": 317
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "purl2notices",
@@ -12313,6 +12329,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 2
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 1
           },
           {
             "category": "without_mirrors",
@@ -14710,20 +14731,34 @@
       "name": "ossnotices",
       "recent": {
         "data": {
-          "last_day": 8,
-          "last_week": 29,
-          "last_month": 186,
-          "total": 1610,
-          "last_day_with_mirrors": 4,
-          "last_week_with_mirrors": 21,
-          "last_month_with_mirrors": 119,
-          "total_with_mirrors": 1086,
-          "last_day_without_mirrors": 4,
+          "last_day": 2,
+          "last_month": 178,
+          "last_week": 27,
+          "last_day_with_mirrors": 2,
+          "last_week_with_mirrors": 19,
+          "last_month_with_mirrors": 115,
+          "total_with_mirrors": 1088,
+          "last_day_without_mirrors": 0,
           "last_week_without_mirrors": 8,
-          "last_month_without_mirrors": 67,
+          "last_month_without_mirrors": 63,
           "total_without_mirrors": 524,
-          "_fallback_warning": {
-            "message": "All metrics calculated from /overall data (API unavailable)"
+          "total": 1612,
+          "_discrepancy_warning": {
+            "discrepancies": {
+              "last_day": {
+                "api_value": 0,
+                "calculated_value": 2
+              },
+              "last_week": {
+                "api_value": 8,
+                "calculated_value": 27
+              },
+              "last_month": {
+                "api_value": 59,
+                "calculated_value": 178
+              }
+            },
+            "message": "Metrics calculated from /overall data due to API staleness"
           }
         },
         "package": "ossnotices",
@@ -15485,6 +15520,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 4
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 2
           },
           {
             "category": "without_mirrors",
@@ -17327,34 +17367,20 @@
       "name": "upmex",
       "recent": {
         "data": {
-          "last_day": 4,
+          "last_day": 1,
+          "last_week": 42,
           "last_month": 317,
-          "last_week": 49,
-          "last_day_with_mirrors": 2,
-          "last_week_with_mirrors": 36,
+          "total": 6736,
+          "last_day_with_mirrors": 1,
+          "last_week_with_mirrors": 31,
           "last_month_with_mirrors": 202,
-          "total_with_mirrors": 3828,
-          "last_day_without_mirrors": 2,
-          "last_week_without_mirrors": 13,
+          "total_with_mirrors": 3829,
+          "last_day_without_mirrors": 0,
+          "last_week_without_mirrors": 11,
           "last_month_without_mirrors": 115,
           "total_without_mirrors": 2907,
-          "total": 6735,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 2,
-                "calculated_value": 4
-              },
-              "last_week": {
-                "api_value": 7,
-                "calculated_value": 49
-              },
-              "last_month": {
-                "api_value": 100,
-                "calculated_value": 317
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "upmex",
@@ -18081,6 +18107,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 2
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 1
           },
           {
             "category": "without_mirrors",
@@ -20418,31 +20449,31 @@
       "name": "src2purl",
       "recent": {
         "data": {
-          "last_day": 6,
-          "last_month": 203,
-          "last_week": 29,
-          "last_day_with_mirrors": 6,
-          "last_week_with_mirrors": 28,
-          "last_month_with_mirrors": 166,
-          "total_with_mirrors": 2053,
+          "last_day": 1,
+          "last_month": 200,
+          "last_week": 23,
+          "last_day_with_mirrors": 1,
+          "last_week_with_mirrors": 22,
+          "last_month_with_mirrors": 164,
+          "total_with_mirrors": 2054,
           "last_day_without_mirrors": 0,
           "last_week_without_mirrors": 1,
-          "last_month_without_mirrors": 37,
+          "last_month_without_mirrors": 36,
           "total_without_mirrors": 758,
-          "total": 2811,
+          "total": 2812,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
                 "api_value": 0,
-                "calculated_value": 6
+                "calculated_value": 1
               },
               "last_week": {
                 "api_value": 1,
-                "calculated_value": 29
+                "calculated_value": 23
               },
               "last_month": {
                 "api_value": 31,
-                "calculated_value": 203
+                "calculated_value": 200
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -21147,6 +21178,11 @@
             "category": "with_mirrors",
             "date": "2026-04-15",
             "downloads": 6
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 1
           },
           {
             "category": "without_mirrors",
@@ -22559,7 +22595,7 @@
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 2,
+                "api_value": 0,
                 "calculated_value": 8
               },
               "last_week": {
@@ -22567,7 +22603,7 @@
                 "calculated_value": 41
               },
               "last_month": {
-                "api_value": 70,
+                "api_value": 65,
                 "calculated_value": 267
               }
             },
@@ -24910,31 +24946,31 @@
       "name": "ospac",
       "recent": {
         "data": {
-          "last_day": 35,
-          "last_month": 527,
-          "last_week": 131,
-          "last_day_with_mirrors": 32,
-          "last_week_with_mirrors": 121,
-          "last_month_with_mirrors": 418,
-          "total_with_mirrors": 7697,
-          "last_day_without_mirrors": 3,
-          "last_week_without_mirrors": 10,
+          "last_day": 26,
+          "last_month": 551,
+          "last_week": 153,
+          "last_day_with_mirrors": 26,
+          "last_week_with_mirrors": 145,
+          "last_month_with_mirrors": 442,
+          "total_with_mirrors": 7723,
+          "last_day_without_mirrors": 0,
+          "last_week_without_mirrors": 8,
           "last_month_without_mirrors": 109,
           "total_without_mirrors": 3215,
-          "total": 10912,
+          "total": 10938,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 3,
-                "calculated_value": 35
+                "api_value": 0,
+                "calculated_value": 26
               },
               "last_week": {
-                "api_value": 10,
-                "calculated_value": 131
+                "api_value": 8,
+                "calculated_value": 153
               },
               "last_month": {
-                "api_value": 93,
-                "calculated_value": 527
+                "api_value": 89,
+                "calculated_value": 551
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -25699,6 +25735,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 32
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 26
           },
           {
             "category": "without_mirrors",
@@ -28161,1190 +28202,23 @@
       "name": "mcp-semclone",
       "recent": {
         "data": {
-          "last_day": 62,
-          "last_month": 713,
-          "last_week": 214,
-          "last_day_with_mirrors": 62,
-          "last_week_with_mirrors": 210,
-          "last_month_with_mirrors": 637,
-          "total_with_mirrors": 7545,
-          "last_day_without_mirrors": 0,
-          "last_week_without_mirrors": 4,
-          "last_month_without_mirrors": 76,
-          "total_without_mirrors": 2048,
-          "total": 9593,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 0,
-                "calculated_value": 62
-              },
-              "last_week": {
-                "api_value": 4,
-                "calculated_value": 214
-              },
-              "last_month": {
-                "api_value": 47,
-                "calculated_value": 713
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
-          }
+          "last_day": 0,
+          "last_month": 47,
+          "last_week": 2,
+          "last_day_with_mirrors": null,
+          "last_week_with_mirrors": null,
+          "last_month_with_mirrors": null,
+          "total_with_mirrors": null,
+          "last_day_without_mirrors": null,
+          "last_week_without_mirrors": null,
+          "last_month_without_mirrors": null,
+          "total_without_mirrors": null,
+          "total": null
         },
         "package": "mcp-semclone",
         "type": "recent_downloads"
       },
-      "overall": {
-        "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-08",
-            "downloads": 324
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-09",
-            "downloads": 773
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-10",
-            "downloads": 154
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-11",
-            "downloads": 243
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-12",
-            "downloads": 502
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-13",
-            "downloads": 245
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-14",
-            "downloads": 1289
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-15",
-            "downloads": 78
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-16",
-            "downloads": 103
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-17",
-            "downloads": 64
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-18",
-            "downloads": 121
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-19",
-            "downloads": 262
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-20",
-            "downloads": 139
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-21",
-            "downloads": 20
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-22",
-            "downloads": 80
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-23",
-            "downloads": 5
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-24",
-            "downloads": 93
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-25",
-            "downloads": 39
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-27",
-            "downloads": 34
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-28",
-            "downloads": 43
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-29",
-            "downloads": 23
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-11-30",
-            "downloads": 84
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-01",
-            "downloads": 31
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-02",
-            "downloads": 4
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-03",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-04",
-            "downloads": 56
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-05",
-            "downloads": 24
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-06",
-            "downloads": 33
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-07",
-            "downloads": 57
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-08",
-            "downloads": 31
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-09",
-            "downloads": 25
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-10",
-            "downloads": 31
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-11",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-12",
-            "downloads": 77
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-13",
-            "downloads": 21
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-14",
-            "downloads": 5
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-15",
-            "downloads": 51
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-16",
-            "downloads": 5
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-17",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-18",
-            "downloads": 42
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-19",
-            "downloads": 48
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-20",
-            "downloads": 31
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-21",
-            "downloads": 31
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-22",
-            "downloads": 68
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-23",
-            "downloads": 19
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-24",
-            "downloads": 10
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-25",
-            "downloads": 12
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-27",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-28",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-29",
-            "downloads": 35
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-30",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2025-12-31",
-            "downloads": 30
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-01",
-            "downloads": 29
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-02",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-03",
-            "downloads": 15
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-05",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-07",
-            "downloads": 29
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-09",
-            "downloads": 72
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-10",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-11",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-12",
-            "downloads": 45
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-13",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-14",
-            "downloads": 58
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-15",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-16",
-            "downloads": 56
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-17",
-            "downloads": 14
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-18",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-19",
-            "downloads": 42
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-20",
-            "downloads": 34
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-21",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-22",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-25",
-            "downloads": 56
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-27",
-            "downloads": 56
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-28",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-29",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-30",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-01-31",
-            "downloads": 5
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-01",
-            "downloads": 58
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-02",
-            "downloads": 4
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-03",
-            "downloads": 71
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-04",
-            "downloads": 7
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-05",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-06",
-            "downloads": 89
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-08",
-            "downloads": 61
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-09",
-            "downloads": 6
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-10",
-            "downloads": 29
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-11",
-            "downloads": 37
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-12",
-            "downloads": 38
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-13",
-            "downloads": 44
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-14",
-            "downloads": 7
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-15",
-            "downloads": 4
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-16",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-18",
-            "downloads": 12
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-20",
-            "downloads": 30
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-22",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-23",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-24",
-            "downloads": 31
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-25",
-            "downloads": 8
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-26",
-            "downloads": 67
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-27",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-02-28",
-            "downloads": 29
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-01",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-02",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-03",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-04",
-            "downloads": 3
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-05",
-            "downloads": 15
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-06",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-07",
-            "downloads": 14
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-08",
-            "downloads": 14
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-09",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-10",
-            "downloads": 4
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-11",
-            "downloads": 16
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-12",
-            "downloads": 14
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-13",
-            "downloads": 71
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-14",
-            "downloads": 57
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-16",
-            "downloads": 14
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-17",
-            "downloads": 4
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-18",
-            "downloads": 6
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-19",
-            "downloads": 8
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-20",
-            "downloads": 67
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-23",
-            "downloads": 8
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-26",
-            "downloads": 4
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-27",
-            "downloads": 5
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-28",
-            "downloads": 49
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-29",
-            "downloads": 7
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-30",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-03-31",
-            "downloads": 30
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-01",
-            "downloads": 1
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-02",
-            "downloads": 8
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-04",
-            "downloads": 9
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-06",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-07",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-10",
-            "downloads": 86
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-12",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-13",
-            "downloads": 2
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-14",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-15",
-            "downloads": 28
-          },
-          {
-            "category": "with_mirrors",
-            "date": "2026-04-16",
-            "downloads": 62
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-08",
-            "downloads": 124
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-09",
-            "downloads": 269
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-10",
-            "downloads": 83
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-11",
-            "downloads": 98
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-12",
-            "downloads": 181
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-13",
-            "downloads": 95
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-14",
-            "downloads": 471
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-15",
-            "downloads": 25
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-16",
-            "downloads": 17
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-18",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-19",
-            "downloads": 107
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-20",
-            "downloads": 65
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-21",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-22",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-24",
-            "downloads": 30
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-25",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-27",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-28",
-            "downloads": 7
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-11-29",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-01",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-03",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-04",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-08",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-09",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-11",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-12",
-            "downloads": 6
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-16",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-18",
-            "downloads": 6
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-19",
-            "downloads": 30
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-20",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-21",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-22",
-            "downloads": 18
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-23",
-            "downloads": 16
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-24",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-25",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-27",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-28",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-29",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2025-12-31",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-01",
-            "downloads": 14
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-03",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-09",
-            "downloads": 42
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-12",
-            "downloads": 15
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-13",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-14",
-            "downloads": 30
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-15",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-17",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-18",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-19",
-            "downloads": 6
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-20",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-21",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-22",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-27",
-            "downloads": 28
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-30",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-01-31",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-02",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-03",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-04",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-05",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-06",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-08",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-10",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-11",
-            "downloads": 30
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-12",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-14",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-18",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-23",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-24",
-            "downloads": 31
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-26",
-            "downloads": 6
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-02-27",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-04",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-05",
-            "downloads": 15
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-07",
-            "downloads": 14
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-09",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-10",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-11",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-12",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-13",
-            "downloads": 15
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-17",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-20",
-            "downloads": 9
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-23",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-26",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-27",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-28",
-            "downloads": 13
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-30",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-03-31",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-04-01",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-04-02",
-            "downloads": 4
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-04-04",
-            "downloads": 3
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-04-10",
-            "downloads": 2
-          },
-          {
-            "category": "without_mirrors",
-            "date": "2026-04-12",
-            "downloads": 2
-          }
-        ],
-        "package": "mcp-semclone",
-        "type": "overall_downloads"
-      },
+      "overall": {},
       "python_versions": {
         "data": [
           {
@@ -30622,34 +29496,20 @@
       "name": "ossval",
       "recent": {
         "data": {
-          "last_day": 10,
-          "last_month": 213,
-          "last_week": 53,
-          "last_day_with_mirrors": 9,
-          "last_week_with_mirrors": 50,
+          "last_day": 7,
+          "last_week": 54,
+          "last_month": 212,
+          "total": 2176,
+          "last_day_with_mirrors": 7,
+          "last_week_with_mirrors": 51,
           "last_month_with_mirrors": 195,
-          "total_with_mirrors": 1699,
-          "last_day_without_mirrors": 1,
+          "total_with_mirrors": 1706,
+          "last_day_without_mirrors": 0,
           "last_week_without_mirrors": 3,
-          "last_month_without_mirrors": 18,
+          "last_month_without_mirrors": 17,
           "total_without_mirrors": 470,
-          "total": 2169,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 1,
-                "calculated_value": 10
-              },
-              "last_week": {
-                "api_value": 3,
-                "calculated_value": 53
-              },
-              "last_month": {
-                "api_value": 10,
-                "calculated_value": 213
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "ossval",
@@ -31226,6 +30086,11 @@
             "category": "with_mirrors",
             "date": "2026-04-16",
             "downloads": 9
+          },
+          {
+            "category": "with_mirrors",
+            "date": "2026-04-17",
+            "downloads": 7
           },
           {
             "category": "without_mirrors",
