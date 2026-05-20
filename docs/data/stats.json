@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-20T07:10:51.404829Z",
+  "last_updated": "2026-05-20T12:49:31.768596Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -21898,9 +21898,8 @@
       "recent": {
         "data": {
           "last_day": 4,
-          "last_week": 64,
           "last_month": 290,
-          "total": 1233,
+          "last_week": 64,
           "last_day_with_mirrors": 2,
           "last_week_with_mirrors": 34,
           "last_month_with_mirrors": 190,
@@ -21909,8 +21908,23 @@
           "last_week_without_mirrors": 30,
           "last_month_without_mirrors": 100,
           "total_without_mirrors": 347,
-          "_fallback_warning": {
-            "message": "All metrics calculated from /overall data (API unavailable)"
+          "total": 1233,
+          "_discrepancy_warning": {
+            "discrepancies": {
+              "last_day": {
+                "api_value": 2,
+                "calculated_value": 4
+              },
+              "last_week": {
+                "api_value": 30,
+                "calculated_value": 64
+              },
+              "last_month": {
+                "api_value": 95,
+                "calculated_value": 290
+              }
+            },
+            "message": "Metrics calculated from /overall data due to API staleness"
           }
         },
         "package": "vulnq",
