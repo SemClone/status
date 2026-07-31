@@ -24,6 +24,8 @@ PACKAGES = [
     "ospac",
     "mcp-semclone",
     "ossval",
+    "ossbomer",
+    "suphm",
 ]
 
 BASE_URL = "https://pypistats.org/api/packages"
