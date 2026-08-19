@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-19T12:30:25.589854Z",
+  "last_updated": "2026-08-19T18:22:30.184932Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -35582,8 +35582,9 @@
       "recent": {
         "data": {
           "last_day": 44,
-          "last_month": 3248,
           "last_week": 274,
+          "last_month": 3248,
+          "total": 4229,
           "last_day_with_mirrors": 22,
           "last_week_with_mirrors": 191,
           "last_month_with_mirrors": 2481,
@@ -35592,23 +35593,8 @@
           "last_week_without_mirrors": 83,
           "last_month_without_mirrors": 767,
           "total_without_mirrors": 909,
-          "total": 4229,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 22,
-                "calculated_value": 44
-              },
-              "last_week": {
-                "api_value": 83,
-                "calculated_value": 274
-              },
-              "last_month": {
-                "api_value": 765,
-                "calculated_value": 3248
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "ossbomer",
