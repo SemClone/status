@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27T02:57:41.737397Z",
+  "last_updated": "2026-09-27T11:08:15.537593Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -34405,9 +34405,8 @@
       "recent": {
         "data": {
           "last_day": 21,
-          "last_week": 144,
           "last_month": 1456,
-          "total": 5490,
+          "last_week": 144,
           "last_day_with_mirrors": 16,
           "last_week_with_mirrors": 125,
           "last_month_with_mirrors": 1141,
@@ -34416,8 +34415,23 @@
           "last_week_without_mirrors": 19,
           "last_month_without_mirrors": 315,
           "total_without_mirrors": 1007,
-          "_fallback_warning": {
-            "message": "All metrics calculated from /overall data (API unavailable)"
+          "total": 5490,
+          "_discrepancy_warning": {
+            "discrepancies": {
+              "last_day": {
+                "api_value": 5,
+                "calculated_value": 21
+              },
+              "last_week": {
+                "api_value": 19,
+                "calculated_value": 144
+              },
+              "last_month": {
+                "api_value": 340,
+                "calculated_value": 1456
+              }
+            },
+            "message": "Metrics calculated from /overall data due to API staleness"
           }
         },
         "package": "mcp-semclone",
