@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-05T03:25:45.772486Z",
+  "last_updated": "2026-10-05T13:14:15.535200Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
@@ -24622,8 +24622,9 @@
       "recent": {
         "data": {
           "last_day": 3,
-          "last_month": 312,
           "last_week": 43,
+          "last_month": 312,
+          "total": 2242,
           "last_day_with_mirrors": 3,
           "last_week_with_mirrors": 35,
           "last_month_with_mirrors": 265,
@@ -24632,23 +24633,8 @@
           "last_week_without_mirrors": 8,
           "last_month_without_mirrors": 47,
           "total_without_mirrors": 477,
-          "total": 2242,
-          "_discrepancy_warning": {
-            "discrepancies": {
-              "last_day": {
-                "api_value": 0,
-                "calculated_value": 3
-              },
-              "last_week": {
-                "api_value": 8,
-                "calculated_value": 43
-              },
-              "last_month": {
-                "api_value": 39,
-                "calculated_value": 312
-              }
-            },
-            "message": "Metrics calculated from /overall data due to API staleness"
+          "_fallback_warning": {
+            "message": "All metrics calculated from /overall data (API unavailable)"
           }
         },
         "package": "src2purl",
@@ -34185,9 +34171,8 @@
       "recent": {
         "data": {
           "last_day": 14,
-          "last_week": 180,
           "last_month": 1250,
-          "total": 5577,
+          "last_week": 180,
           "last_day_with_mirrors": 11,
           "last_week_with_mirrors": 172,
           "last_month_with_mirrors": 1039,
@@ -34196,8 +34181,23 @@
           "last_week_without_mirrors": 8,
           "last_month_without_mirrors": 211,
           "total_without_mirrors": 1003,
-          "_fallback_warning": {
-            "message": "All metrics calculated from /overall data (API unavailable)"
+          "total": 5577,
+          "_discrepancy_warning": {
+            "discrepancies": {
+              "last_day": {
+                "api_value": 3,
+                "calculated_value": 14
+              },
+              "last_week": {
+                "api_value": 8,
+                "calculated_value": 180
+              },
+              "last_month": {
+                "api_value": 211,
+                "calculated_value": 1250
+              }
+            },
+            "message": "Metrics calculated from /overall data due to API staleness"
           }
         },
         "package": "mcp-semclone",
