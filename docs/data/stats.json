@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-11-14T21:51:46.651060Z",
+  "last_updated": "2026-11-15T04:11:28.851930Z",
   "packages": {
     "purl2src": {
       "name": "purl2src",
       "recent": {
         "data": {
-          "last_day": 3488,
-          "last_month": 37759,
-          "last_week": 25632,
-          "last_day_with_mirrors": 1745,
-          "last_week_with_mirrors": 12828,
-          "last_month_with_mirrors": 18969,
-          "total_with_mirrors": 21264,
-          "last_day_without_mirrors": 1743,
-          "last_week_without_mirrors": 12804,
-          "last_month_without_mirrors": 18790,
-          "total_without_mirrors": 20012,
-          "total": 41276,
+          "last_day": 4215,
+          "last_month": 41955,
+          "last_week": 26085,
+          "last_day_with_mirrors": 2112,
+          "last_week_with_mirrors": 13059,
+          "last_month_with_mirrors": 21071,
+          "total_with_mirrors": 23374,
+          "last_day_without_mirrors": 2103,
+          "last_week_without_mirrors": 13026,
+          "last_month_without_mirrors": 20884,
+          "total_without_mirrors": 22113,
+          "total": 45487,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 1743,
-                "calculated_value": 3488
+                "api_value": 2103,
+                "calculated_value": 4215
               },
               "last_week": {
-                "api_value": 12804,
-                "calculated_value": 25632
+                "api_value": 13026,
+                "calculated_value": 26085
               },
               "last_month": {
-                "api_value": 18781,
-                "calculated_value": 37759
+                "api_value": 20873,
+                "calculated_value": 41955
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -40,11 +40,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 2
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -911,9 +906,9 @@
             "downloads": 1745
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 2
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2112
           },
           {
             "category": "without_mirrors",
@@ -1689,6 +1684,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 1743
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2103
           }
         ],
         "package": "purl2src",
@@ -2572,6 +2572,11 @@
             "downloads": 1732
           },
           {
+            "category": "3.13",
+            "date": "2026-11-14",
+            "downloads": 2103
+          },
+          {
             "category": "3.14",
             "date": "2026-07-03",
             "downloads": 2
@@ -2675,11 +2680,6 @@
             "category": "3.9",
             "date": "2026-11-12",
             "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 2
           },
           {
             "category": "null",
@@ -3828,6 +3828,11 @@
             "downloads": 1732
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 2103
+          },
+          {
             "category": "Windows",
             "date": "2026-06-08",
             "downloads": 2
@@ -3906,11 +3911,6 @@
             "category": "Windows",
             "date": "2026-11-12",
             "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 2
           },
           {
             "category": "null",
@@ -4451,31 +4451,31 @@
       "name": "binarysniffer",
       "recent": {
         "data": {
-          "last_day": 16,
-          "last_month": 214,
-          "last_week": 54,
-          "last_day_with_mirrors": 13,
-          "last_week_with_mirrors": 42,
-          "last_month_with_mirrors": 151,
-          "total_with_mirrors": 1391,
-          "last_day_without_mirrors": 3,
-          "last_week_without_mirrors": 12,
-          "last_month_without_mirrors": 63,
-          "total_without_mirrors": 538,
-          "total": 1929,
+          "last_day": 22,
+          "last_month": 221,
+          "last_week": 70,
+          "last_day_with_mirrors": 16,
+          "last_week_with_mirrors": 55,
+          "last_month_with_mirrors": 155,
+          "total_with_mirrors": 1401,
+          "last_day_without_mirrors": 6,
+          "last_week_without_mirrors": 15,
+          "last_month_without_mirrors": 66,
+          "total_without_mirrors": 543,
+          "total": 1944,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 3,
-                "calculated_value": 16
+                "api_value": 6,
+                "calculated_value": 22
               },
               "last_week": {
-                "api_value": 12,
-                "calculated_value": 54
+                "api_value": 15,
+                "calculated_value": 70
               },
               "last_month": {
-                "api_value": 55,
-                "calculated_value": 214
+                "api_value": 56,
+                "calculated_value": 221
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -4486,11 +4486,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 6
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -5352,9 +5347,9 @@
             "downloads": 13
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 1
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 16
           },
           {
             "category": "without_mirrors",
@@ -6000,6 +5995,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 3
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 6
           }
         ],
         "package": "binarysniffer",
@@ -6173,6 +6173,11 @@
             "downloads": 2
           },
           {
+            "category": "3.11",
+            "date": "2026-11-14",
+            "downloads": 1
+          },
+          {
             "category": "3.12",
             "date": "2026-06-02",
             "downloads": 2
@@ -6273,6 +6278,11 @@
             "downloads": 1
           },
           {
+            "category": "3.12",
+            "date": "2026-11-14",
+            "downloads": 1
+          },
+          {
             "category": "3.13",
             "date": "2026-05-26",
             "downloads": 2
@@ -6305,6 +6315,11 @@
           {
             "category": "3.13",
             "date": "2026-11-13",
+            "downloads": 1
+          },
+          {
+            "category": "3.13",
+            "date": "2026-11-14",
             "downloads": 1
           },
           {
@@ -6373,6 +6388,11 @@
             "downloads": 1
           },
           {
+            "category": "3.14",
+            "date": "2026-11-14",
+            "downloads": 3
+          },
+          {
             "category": "3.8",
             "date": "2026-09-02",
             "downloads": 1
@@ -6380,11 +6400,6 @@
           {
             "category": "3.8",
             "date": "2026-10-05",
-            "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
             "downloads": 1
           },
           {
@@ -6994,6 +7009,11 @@
             "downloads": 1
           },
           {
+            "category": "Darwin",
+            "date": "2026-11-14",
+            "downloads": 1
+          },
+          {
             "category": "Linux",
             "date": "2026-05-26",
             "downloads": 2
@@ -7244,6 +7264,11 @@
             "downloads": 2
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 3
+          },
+          {
             "category": "Windows",
             "date": "2026-06-08",
             "downloads": 4
@@ -7299,9 +7324,9 @@
             "downloads": 1
           },
           {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
+            "category": "Windows",
+            "date": "2026-11-14",
+            "downloads": 2
           },
           {
             "category": "null",
@@ -7847,31 +7872,31 @@
       "name": "osslili",
       "recent": {
         "data": {
-          "last_day": 3586,
-          "last_month": 43735,
-          "last_week": 25995,
-          "last_day_with_mirrors": 1809,
-          "last_week_with_mirrors": 13036,
-          "last_month_with_mirrors": 22193,
-          "total_with_mirrors": 37744,
-          "last_day_without_mirrors": 1777,
-          "last_week_without_mirrors": 12959,
-          "last_month_without_mirrors": 21542,
-          "total_without_mirrors": 30758,
-          "total": 68502,
+          "last_day": 4261,
+          "last_month": 47651,
+          "last_week": 26468,
+          "last_day_with_mirrors": 2132,
+          "last_week_with_mirrors": 13271,
+          "last_month_with_mirrors": 24152,
+          "total_with_mirrors": 39845,
+          "last_day_without_mirrors": 2129,
+          "last_week_without_mirrors": 13197,
+          "last_month_without_mirrors": 23499,
+          "total_without_mirrors": 32856,
+          "total": 72701,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 1777,
-                "calculated_value": 3586
+                "api_value": 2129,
+                "calculated_value": 4261
               },
               "last_week": {
-                "api_value": 12959,
-                "calculated_value": 25995
+                "api_value": 13197,
+                "calculated_value": 26468
               },
               "last_month": {
-                "api_value": 21542,
-                "calculated_value": 43735
+                "api_value": 23499,
+                "calculated_value": 47651
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -7882,11 +7907,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 31
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -8788,9 +8808,9 @@
             "downloads": 1809
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 31
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2132
           },
           {
             "category": "without_mirrors",
@@ -9671,6 +9691,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 1777
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2129
           }
         ],
         "package": "osslili",
@@ -10064,9 +10089,9 @@
             "downloads": 2
           },
           {
-            "category": "3.11",
-            "date": "2026-05-17",
-            "downloads": 16
+            "category": "3.10",
+            "date": "2026-11-14",
+            "downloads": 1
           },
           {
             "category": "3.11",
@@ -10789,6 +10814,11 @@
             "downloads": 36
           },
           {
+            "category": "3.11",
+            "date": "2026-11-14",
+            "downloads": 8
+          },
+          {
             "category": "3.12",
             "date": "2026-05-26",
             "downloads": 2
@@ -11439,9 +11469,9 @@
             "downloads": 7
           },
           {
-            "category": "3.13",
-            "date": "2026-05-17",
-            "downloads": 12
+            "category": "3.12",
+            "date": "2026-11-14",
+            "downloads": 4
           },
           {
             "category": "3.13",
@@ -12054,6 +12084,11 @@
             "downloads": 1734
           },
           {
+            "category": "3.13",
+            "date": "2026-11-14",
+            "downloads": 2111
+          },
+          {
             "category": "3.14",
             "date": "2026-05-18",
             "downloads": 2
@@ -12247,6 +12282,11 @@
             "category": "3.14",
             "date": "2026-11-12",
             "downloads": 2
+          },
+          {
+            "category": "3.14",
+            "date": "2026-11-14",
+            "downloads": 3
           },
           {
             "category": "3.15",
@@ -12507,11 +12547,6 @@
             "category": "3.9",
             "date": "2026-11-12",
             "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 3
           },
           {
             "category": "null",
@@ -13242,6 +13277,11 @@
             "category": "null",
             "date": "2026-11-12",
             "downloads": 3
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 2
           }
         ],
         "package": "osslili",
@@ -13249,11 +13289,6 @@
       },
       "system": {
         "data": [
-          {
-            "category": "Darwin",
-            "date": "2026-05-17",
-            "downloads": 18
-          },
           {
             "category": "Darwin",
             "date": "2026-05-20",
@@ -13625,9 +13660,9 @@
             "downloads": 1
           },
           {
-            "category": "Linux",
-            "date": "2026-05-17",
-            "downloads": 10
+            "category": "Darwin",
+            "date": "2026-11-14",
+            "downloads": 2
           },
           {
             "category": "Linux",
@@ -14420,6 +14455,11 @@
             "downloads": 1776
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 2123
+          },
+          {
             "category": "Windows",
             "date": "2026-05-18",
             "downloads": 2
@@ -14630,9 +14670,9 @@
             "downloads": 1
           },
           {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 3
+            "category": "Windows",
+            "date": "2026-11-14",
+            "downloads": 2
           },
           {
             "category": "null",
@@ -15365,6 +15405,11 @@
             "downloads": 3
           },
           {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 2
+          },
+          {
             "category": "other",
             "date": "2026-10-24",
             "downloads": 2
@@ -15383,31 +15428,31 @@
       "name": "purl2notices",
       "recent": {
         "data": {
-          "last_day": 2,
-          "last_month": 411,
-          "last_week": 41,
-          "last_day_with_mirrors": 2,
-          "last_week_with_mirrors": 32,
-          "last_month_with_mirrors": 328,
-          "total_with_mirrors": 2328,
-          "last_day_without_mirrors": 0,
-          "last_week_without_mirrors": 9,
-          "last_month_without_mirrors": 83,
-          "total_without_mirrors": 841,
-          "total": 3169,
+          "last_day": 9,
+          "last_month": 390,
+          "last_week": 44,
+          "last_day_with_mirrors": 8,
+          "last_week_with_mirrors": 34,
+          "last_month_with_mirrors": 311,
+          "total_with_mirrors": 2333,
+          "last_day_without_mirrors": 1,
+          "last_week_without_mirrors": 10,
+          "last_month_without_mirrors": 79,
+          "total_without_mirrors": 839,
+          "total": 3172,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 0,
-                "calculated_value": 2
+                "api_value": 1,
+                "calculated_value": 9
               },
               "last_week": {
-                "api_value": 9,
-                "calculated_value": 41
+                "api_value": 6,
+                "calculated_value": 44
               },
               "last_month": {
-                "api_value": 74,
-                "calculated_value": 411
+                "api_value": 66,
+                "calculated_value": 390
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -15418,11 +15463,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 3
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -16274,9 +16314,9 @@
             "downloads": 2
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 3
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 8
           },
           {
             "category": "without_mirrors",
@@ -16962,6 +17002,11 @@
             "category": "without_mirrors",
             "date": "2026-11-12",
             "downloads": 2
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 1
           }
         ],
         "package": "purl2notices",
@@ -17436,11 +17481,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 3
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 4
           },
@@ -18007,6 +18047,11 @@
           {
             "category": "null",
             "date": "2026-11-12",
+            "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
             "downloads": 1
           }
         ],
@@ -18422,11 +18467,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 3
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 4
           },
@@ -18994,6 +19034,11 @@
             "category": "null",
             "date": "2026-11-12",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 1
           }
         ],
         "package": "purl2notices",
@@ -19004,31 +19049,31 @@
       "name": "ossnotices",
       "recent": {
         "data": {
-          "last_day": 1,
-          "last_month": 142,
-          "last_week": 34,
-          "last_day_with_mirrors": 1,
-          "last_week_with_mirrors": 23,
-          "last_month_with_mirrors": 101,
-          "total_with_mirrors": 735,
-          "last_day_without_mirrors": 0,
+          "last_day": 3,
+          "last_month": 144,
+          "last_week": 29,
+          "last_day_with_mirrors": 2,
+          "last_week_with_mirrors": 18,
+          "last_month_with_mirrors": 102,
+          "total_with_mirrors": 732,
+          "last_day_without_mirrors": 1,
           "last_week_without_mirrors": 11,
-          "last_month_without_mirrors": 41,
-          "total_without_mirrors": 380,
-          "total": 1115,
+          "last_month_without_mirrors": 42,
+          "total_without_mirrors": 376,
+          "total": 1108,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 0,
-                "calculated_value": 1
+                "api_value": 1,
+                "calculated_value": 3
               },
               "last_week": {
-                "api_value": 9,
-                "calculated_value": 34
+                "api_value": 8,
+                "calculated_value": 29
               },
               "last_month": {
-                "api_value": 36,
-                "calculated_value": 142
+                "api_value": 33,
+                "calculated_value": 144
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -19039,11 +19084,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 5
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -19840,9 +19880,9 @@
             "downloads": 1
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 5
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2
           },
           {
             "category": "without_mirrors",
@@ -20373,6 +20413,11 @@
             "category": "without_mirrors",
             "date": "2026-11-12",
             "downloads": 3
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 1
           }
         ],
         "package": "ossnotices",
@@ -20419,11 +20464,6 @@
             "category": "3.10",
             "date": "2026-11-08",
             "downloads": 1
-          },
-          {
-            "category": "3.11",
-            "date": "2026-05-17",
-            "downloads": 2
           },
           {
             "category": "3.11",
@@ -20699,11 +20739,6 @@
             "category": "3.9",
             "date": "2026-11-12",
             "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 3
           },
           {
             "category": "null",
@@ -21114,6 +21149,11 @@
             "category": "null",
             "date": "2026-11-12",
             "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 1
           }
         ],
         "package": "ossnotices",
@@ -21121,11 +21161,6 @@
       },
       "system": {
         "data": [
-          {
-            "category": "Darwin",
-            "date": "2026-05-17",
-            "downloads": 2
-          },
           {
             "category": "Darwin",
             "date": "2026-06-03",
@@ -21443,11 +21478,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 3
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 2
           },
@@ -21855,6 +21885,11 @@
             "category": "null",
             "date": "2026-11-12",
             "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 1
           }
         ],
         "package": "ossnotices",
@@ -21865,31 +21900,31 @@
       "name": "upmex",
       "recent": {
         "data": {
-          "last_day": 8,
-          "last_month": 487,
-          "last_week": 52,
-          "last_day_with_mirrors": 5,
-          "last_week_with_mirrors": 40,
-          "last_month_with_mirrors": 383,
-          "total_with_mirrors": 5072,
-          "last_day_without_mirrors": 3,
-          "last_week_without_mirrors": 12,
-          "last_month_without_mirrors": 104,
-          "total_without_mirrors": 2380,
-          "total": 7452,
+          "last_day": 35,
+          "last_month": 442,
+          "last_week": 73,
+          "last_day_with_mirrors": 19,
+          "last_week_with_mirrors": 47,
+          "last_month_with_mirrors": 346,
+          "total_with_mirrors": 5078,
+          "last_day_without_mirrors": 16,
+          "last_week_without_mirrors": 26,
+          "last_month_without_mirrors": 96,
+          "total_without_mirrors": 2383,
+          "total": 7461,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 3,
-                "calculated_value": 8
+                "api_value": 16,
+                "calculated_value": 35
               },
               "last_week": {
-                "api_value": 12,
-                "calculated_value": 52
+                "api_value": 26,
+                "calculated_value": 73
               },
               "last_month": {
-                "api_value": 75,
-                "calculated_value": 487
+                "api_value": 87,
+                "calculated_value": 442
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -21900,11 +21935,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 13
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -22746,9 +22776,9 @@
             "downloads": 5
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 13
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 19
           },
           {
             "category": "without_mirrors",
@@ -23424,6 +23454,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 3
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 16
           }
         ],
         "package": "upmex",
@@ -23707,6 +23742,11 @@
             "downloads": 2
           },
           {
+            "category": "3.11",
+            "date": "2026-11-14",
+            "downloads": 1
+          },
+          {
             "category": "3.12",
             "date": "2026-06-02",
             "downloads": 2
@@ -23927,9 +23967,9 @@
             "downloads": 1
           },
           {
-            "category": "3.13",
-            "date": "2026-05-17",
-            "downloads": 12
+            "category": "3.12",
+            "date": "2026-11-14",
+            "downloads": 1
           },
           {
             "category": "3.13",
@@ -24082,6 +24122,11 @@
             "downloads": 1
           },
           {
+            "category": "3.13",
+            "date": "2026-11-14",
+            "downloads": 1
+          },
+          {
             "category": "3.14",
             "date": "2026-06-08",
             "downloads": 4
@@ -24177,6 +24222,11 @@
             "downloads": 1
           },
           {
+            "category": "3.14",
+            "date": "2026-11-14",
+            "downloads": 3
+          },
+          {
             "category": "3.15",
             "date": "2026-10-13",
             "downloads": 1
@@ -24234,11 +24284,6 @@
           {
             "category": "3.9",
             "date": "2026-11-12",
-            "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
             "downloads": 1
           },
           {
@@ -24700,6 +24745,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 10
           }
         ],
         "package": "upmex",
@@ -24707,11 +24757,6 @@
       },
       "system": {
         "data": [
-          {
-            "category": "Darwin",
-            "date": "2026-05-17",
-            "downloads": 4
-          },
           {
             "category": "Darwin",
             "date": "2026-05-21",
@@ -24883,9 +24928,9 @@
             "downloads": 1
           },
           {
-            "category": "Linux",
-            "date": "2026-05-17",
-            "downloads": 8
+            "category": "Darwin",
+            "date": "2026-11-14",
+            "downloads": 1
           },
           {
             "category": "Linux",
@@ -25258,6 +25303,11 @@
             "downloads": 1
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 3
+          },
+          {
             "category": "Windows",
             "date": "2026-06-08",
             "downloads": 6
@@ -25353,9 +25403,9 @@
             "downloads": 1
           },
           {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
+            "category": "Windows",
+            "date": "2026-11-14",
+            "downloads": 2
           },
           {
             "category": "null",
@@ -25816,6 +25866,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 10
           }
         ],
         "package": "upmex",
@@ -25832,16 +25887,16 @@
           "last_day_with_mirrors": 11,
           "last_week_with_mirrors": 40,
           "last_month_with_mirrors": 255,
-          "total_with_mirrors": 1835,
+          "total_with_mirrors": 1834,
           "last_day_without_mirrors": 10,
           "last_week_without_mirrors": 13,
           "last_month_without_mirrors": 36,
-          "total_without_mirrors": 497,
-          "total": 2332,
+          "total_without_mirrors": 496,
+          "total": 2330,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 10,
+                "api_value": 0,
                 "calculated_value": 21
               },
               "last_week": {
@@ -25861,11 +25916,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -26643,11 +26693,6 @@
           },
           {
             "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "without_mirrors",
             "date": "2026-05-18",
             "downloads": 2
           },
@@ -27234,11 +27279,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 2
           },
@@ -27735,11 +27775,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 2
           },
@@ -28102,31 +28137,31 @@
       "name": "vulnq",
       "recent": {
         "data": {
-          "last_day": 3469,
-          "last_month": 38143,
-          "last_week": 25792,
-          "last_day_with_mirrors": 1735,
-          "last_week_with_mirrors": 12962,
-          "last_month_with_mirrors": 19320,
-          "total_with_mirrors": 23403,
-          "last_day_without_mirrors": 1734,
-          "last_week_without_mirrors": 12830,
-          "last_month_without_mirrors": 18823,
-          "total_without_mirrors": 20264,
-          "total": 43667,
+          "last_day": 4213,
+          "last_month": 42286,
+          "last_week": 26184,
+          "last_day_with_mirrors": 2107,
+          "last_week_with_mirrors": 13136,
+          "last_month_with_mirrors": 21372,
+          "total_with_mirrors": 25507,
+          "last_day_without_mirrors": 2106,
+          "last_week_without_mirrors": 13048,
+          "last_month_without_mirrors": 20914,
+          "total_without_mirrors": 22367,
+          "total": 47874,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 1734,
-                "calculated_value": 3469
+                "api_value": 2106,
+                "calculated_value": 4213
               },
               "last_week": {
-                "api_value": 12830,
-                "calculated_value": 25792
+                "api_value": 13048,
+                "calculated_value": 26184
               },
               "last_month": {
-                "api_value": 18823,
-                "calculated_value": 38143
+                "api_value": 20914,
+                "calculated_value": 42286
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -28137,11 +28172,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 3
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -28993,9 +29023,9 @@
             "downloads": 1735
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 3
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2107
           },
           {
             "category": "without_mirrors",
@@ -29671,6 +29701,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 1734
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2106
           }
         ],
         "package": "vulnq",
@@ -30170,11 +30205,6 @@
           },
           {
             "category": "3.13",
-            "date": "2026-05-17",
-            "downloads": 2
-          },
-          {
-            "category": "3.13",
             "date": "2026-05-19",
             "downloads": 2
           },
@@ -30334,6 +30364,11 @@
             "downloads": 1732
           },
           {
+            "category": "3.13",
+            "date": "2026-11-14",
+            "downloads": 2102
+          },
+          {
             "category": "3.14",
             "date": "2026-05-23",
             "downloads": 2
@@ -30446,11 +30481,6 @@
           {
             "category": "3.8",
             "date": "2026-11-05",
-            "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
             "downloads": 1
           },
           {
@@ -30977,6 +31007,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "vulnq",
@@ -31113,11 +31148,6 @@
             "category": "Darwin",
             "date": "2026-11-09",
             "downloads": 1
-          },
-          {
-            "category": "Linux",
-            "date": "2026-05-17",
-            "downloads": 2
           },
           {
             "category": "Linux",
@@ -31485,6 +31515,11 @@
             "downloads": 1732
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 2102
+          },
+          {
             "category": "Windows",
             "date": "2026-05-23",
             "downloads": 2
@@ -31517,11 +31552,6 @@
           {
             "category": "Windows",
             "date": "2026-09-27",
-            "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
             "downloads": 1
           },
           {
@@ -32048,6 +32078,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 2
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "vulnq",
@@ -32058,31 +32093,31 @@
       "name": "ospac",
       "recent": {
         "data": {
-          "last_day": 3577,
-          "last_month": 38440,
-          "last_week": 25705,
-          "last_day_with_mirrors": 1811,
-          "last_week_with_mirrors": 12895,
-          "last_month_with_mirrors": 19670,
-          "total_with_mirrors": 33789,
-          "last_day_without_mirrors": 1766,
-          "last_week_without_mirrors": 12810,
-          "last_month_without_mirrors": 18770,
-          "total_without_mirrors": 23433,
-          "total": 57222,
+          "last_day": 4220,
+          "last_month": 42650,
+          "last_week": 26151,
+          "last_day_with_mirrors": 2112,
+          "last_week_with_mirrors": 13116,
+          "last_month_with_mirrors": 21777,
+          "total_with_mirrors": 35876,
+          "last_day_without_mirrors": 2108,
+          "last_week_without_mirrors": 13035,
+          "last_month_without_mirrors": 20873,
+          "total_without_mirrors": 25516,
+          "total": 61392,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 1766,
-                "calculated_value": 3577
+                "api_value": 2108,
+                "calculated_value": 4220
               },
               "last_week": {
-                "api_value": 12810,
-                "calculated_value": 25705
+                "api_value": 13035,
+                "calculated_value": 26151
               },
               "last_month": {
-                "api_value": 18770,
-                "calculated_value": 38440
+                "api_value": 20873,
+                "calculated_value": 42650
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -32093,11 +32128,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 25
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -32984,9 +33014,9 @@
             "downloads": 1811
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 25
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2112
           },
           {
             "category": "without_mirrors",
@@ -33737,6 +33767,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 1766
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2108
           }
         ],
         "package": "ospac",
@@ -33898,11 +33933,6 @@
             "category": "3.10",
             "date": "2026-11-08",
             "downloads": 1
-          },
-          {
-            "category": "3.11",
-            "date": "2026-05-17",
-            "downloads": 24
           },
           {
             "category": "3.11",
@@ -34550,6 +34580,11 @@
             "downloads": 1732
           },
           {
+            "category": "3.13",
+            "date": "2026-11-14",
+            "downloads": 2102
+          },
+          {
             "category": "3.14",
             "date": "2026-06-10",
             "downloads": 2
@@ -34688,11 +34723,6 @@
             "category": "3.9",
             "date": "2026-08-20",
             "downloads": 48
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
           },
           {
             "category": "null",
@@ -35358,6 +35388,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 34
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 6
           }
         ],
         "package": "ospac",
@@ -35365,11 +35400,6 @@
       },
       "system": {
         "data": [
-          {
-            "category": "Darwin",
-            "date": "2026-05-17",
-            "downloads": 24
-          },
           {
             "category": "Darwin",
             "date": "2026-06-10",
@@ -35926,6 +35956,11 @@
             "downloads": 1732
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 2102
+          },
+          {
             "category": "Windows",
             "date": "2026-07-23",
             "downloads": 2
@@ -35944,11 +35979,6 @@
             "category": "Windows",
             "date": "2026-08-04",
             "downloads": 2
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
           },
           {
             "category": "null",
@@ -36614,6 +36644,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 34
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 6
           }
         ],
         "package": "ospac",
@@ -36624,31 +36659,31 @@
       "name": "mcp-semclone",
       "recent": {
         "data": {
-          "last_day": 28,
-          "last_month": 894,
-          "last_week": 163,
-          "last_day_with_mirrors": 25,
-          "last_week_with_mirrors": 129,
-          "last_month_with_mirrors": 731,
-          "total_with_mirrors": 4846,
-          "last_day_without_mirrors": 3,
-          "last_week_without_mirrors": 34,
-          "last_month_without_mirrors": 163,
-          "total_without_mirrors": 1119,
-          "total": 5965,
+          "last_day": 13,
+          "last_month": 824,
+          "last_week": 159,
+          "last_day_with_mirrors": 9,
+          "last_week_with_mirrors": 122,
+          "last_month_with_mirrors": 678,
+          "total_with_mirrors": 4798,
+          "last_day_without_mirrors": 4,
+          "last_week_without_mirrors": 37,
+          "last_month_without_mirrors": 146,
+          "total_without_mirrors": 1122,
+          "total": 5920,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 3,
-                "calculated_value": 28
+                "api_value": 4,
+                "calculated_value": 13
               },
               "last_week": {
-                "api_value": 34,
-                "calculated_value": 163
+                "api_value": 37,
+                "calculated_value": 159
               },
               "last_month": {
-                "api_value": 163,
-                "calculated_value": 894
+                "api_value": 146,
+                "calculated_value": 824
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -36659,11 +36694,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 57
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -37535,9 +37565,9 @@
             "downloads": 25
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 1
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 9
           },
           {
             "category": "without_mirrors",
@@ -38103,6 +38133,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 3
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "mcp-semclone",
@@ -38247,11 +38282,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 2
           },
@@ -38769,6 +38799,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 3
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "mcp-semclone",
@@ -38893,11 +38928,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 2
           },
@@ -39415,6 +39445,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 3
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "mcp-semclone",
@@ -39426,17 +39461,17 @@
       "recent": {
         "data": {
           "last_day": 4,
-          "last_month": 178,
-          "last_week": 27,
+          "last_month": 176,
+          "last_week": 29,
           "last_day_with_mirrors": 4,
-          "last_week_with_mirrors": 19,
-          "last_month_with_mirrors": 154,
-          "total_with_mirrors": 894,
+          "last_week_with_mirrors": 22,
+          "last_month_with_mirrors": 152,
+          "total_with_mirrors": 891,
           "last_day_without_mirrors": 0,
-          "last_week_without_mirrors": 8,
+          "last_week_without_mirrors": 7,
           "last_month_without_mirrors": 24,
-          "total_without_mirrors": 170,
-          "total": 1064,
+          "total_without_mirrors": 163,
+          "total": 1054,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
@@ -39444,12 +39479,12 @@
                 "calculated_value": 4
               },
               "last_week": {
-                "api_value": 5,
-                "calculated_value": 27
+                "api_value": 2,
+                "calculated_value": 29
               },
               "last_month": {
-                "api_value": 18,
-                "calculated_value": 178
+                "api_value": 17,
+                "calculated_value": 176
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -39460,11 +39495,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 7
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -40176,9 +40206,9 @@
             "downloads": 4
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 7
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 4
           },
           {
             "category": "without_mirrors",
@@ -40493,11 +40523,6 @@
           },
           {
             "category": "3.11",
-            "date": "2026-05-17",
-            "downloads": 6
-          },
-          {
-            "category": "3.11",
             "date": "2026-06-14",
             "downloads": 1
           },
@@ -40544,11 +40569,6 @@
           {
             "category": "3.8",
             "date": "2026-10-31",
-            "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
             "downloads": 1
           },
           {
@@ -40824,11 +40844,6 @@
         "data": [
           {
             "category": "Darwin",
-            "date": "2026-05-17",
-            "downloads": 6
-          },
-          {
-            "category": "Darwin",
             "date": "2026-07-22",
             "downloads": 2
           },
@@ -40880,11 +40895,6 @@
           {
             "category": "Windows",
             "date": "2026-10-09",
-            "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
             "downloads": 1
           },
           {
@@ -41161,31 +41171,31 @@
       "name": "ossbomer",
       "recent": {
         "data": {
-          "last_day": 25,
-          "last_month": 575,
-          "last_week": 82,
-          "last_day_with_mirrors": 24,
-          "last_week_with_mirrors": 75,
-          "last_month_with_mirrors": 523,
-          "total_with_mirrors": 6520,
-          "last_day_without_mirrors": 1,
-          "last_week_without_mirrors": 7,
-          "last_month_without_mirrors": 52,
-          "total_without_mirrors": 1766,
-          "total": 8286,
+          "last_day": 65,
+          "last_month": 631,
+          "last_week": 115,
+          "last_day_with_mirrors": 33,
+          "last_week_with_mirrors": 78,
+          "last_month_with_mirrors": 547,
+          "total_with_mirrors": 6542,
+          "last_day_without_mirrors": 32,
+          "last_week_without_mirrors": 37,
+          "last_month_without_mirrors": 84,
+          "total_without_mirrors": 1787,
+          "total": 8329,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 1,
-                "calculated_value": 25
+                "api_value": 32,
+                "calculated_value": 65
               },
               "last_week": {
-                "api_value": 5,
-                "calculated_value": 82
+                "api_value": 36,
+                "calculated_value": 115
               },
               "last_month": {
-                "api_value": 39,
-                "calculated_value": 575
+                "api_value": 63,
+                "calculated_value": 631
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -41196,11 +41206,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 11
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -42032,9 +42037,9 @@
             "downloads": 24
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 11
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 33
           },
           {
             "category": "without_mirrors",
@@ -42605,6 +42610,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 1
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 32
           }
         ],
         "package": "ossbomer",
@@ -42641,11 +42651,6 @@
             "category": "3.10",
             "date": "2026-10-29",
             "downloads": 1
-          },
-          {
-            "category": "3.11",
-            "date": "2026-05-17",
-            "downloads": 10
           },
           {
             "category": "3.11",
@@ -42909,11 +42914,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 3
           },
@@ -43426,6 +43426,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 32
           }
         ],
         "package": "ossbomer",
@@ -43433,11 +43438,6 @@
       },
       "system": {
         "data": [
-          {
-            "category": "Darwin",
-            "date": "2026-05-17",
-            "downloads": 10
-          },
           {
             "category": "Darwin",
             "date": "2026-07-31",
@@ -43645,11 +43645,6 @@
           },
           {
             "category": "null",
-            "date": "2026-05-17",
-            "downloads": 1
-          },
-          {
-            "category": "null",
             "date": "2026-05-18",
             "downloads": 3
           },
@@ -44162,6 +44157,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 1
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 32
           }
         ],
         "package": "ossbomer",
@@ -44172,31 +44172,31 @@
       "name": "suphm",
       "recent": {
         "data": {
-          "last_day": 3531,
-          "last_month": 38379,
-          "last_week": 26186,
-          "last_day_with_mirrors": 1770,
-          "last_week_with_mirrors": 13262,
-          "last_month_with_mirrors": 19524,
-          "total_with_mirrors": 23820,
-          "last_day_without_mirrors": 1761,
-          "last_week_without_mirrors": 12924,
-          "last_month_without_mirrors": 18855,
-          "total_without_mirrors": 19988,
-          "total": 43808,
+          "last_day": 4242,
+          "last_month": 42574,
+          "last_week": 26654,
+          "last_day_with_mirrors": 2135,
+          "last_week_with_mirrors": 13504,
+          "last_month_with_mirrors": 21633,
+          "total_with_mirrors": 25925,
+          "last_day_without_mirrors": 2107,
+          "last_week_without_mirrors": 13150,
+          "last_month_without_mirrors": 20941,
+          "total_without_mirrors": 22089,
+          "total": 48014,
           "_discrepancy_warning": {
             "discrepancies": {
               "last_day": {
-                "api_value": 1761,
-                "calculated_value": 3531
+                "api_value": 2107,
+                "calculated_value": 4242
               },
               "last_week": {
-                "api_value": 12924,
-                "calculated_value": 26186
+                "api_value": 13150,
+                "calculated_value": 26654
               },
               "last_month": {
-                "api_value": 18834,
-                "calculated_value": 38379
+                "api_value": 20939,
+                "calculated_value": 42574
               }
             },
             "message": "Metrics calculated from /overall data due to API staleness"
@@ -44207,11 +44207,6 @@
       },
       "overall": {
         "data": [
-          {
-            "category": "with_mirrors",
-            "date": "2026-05-17",
-            "downloads": 30
-          },
           {
             "category": "with_mirrors",
             "date": "2026-05-18",
@@ -45073,9 +45068,9 @@
             "downloads": 1770
           },
           {
-            "category": "without_mirrors",
-            "date": "2026-05-17",
-            "downloads": 6
+            "category": "with_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2135
           },
           {
             "category": "without_mirrors",
@@ -45636,6 +45631,11 @@
             "category": "without_mirrors",
             "date": "2026-11-13",
             "downloads": 1761
+          },
+          {
+            "category": "without_mirrors",
+            "date": "2026-11-14",
+            "downloads": 2107
           }
         ],
         "package": "suphm",
@@ -45767,6 +45767,11 @@
             "category": "3.11",
             "date": "2026-11-10",
             "downloads": 14
+          },
+          {
+            "category": "3.11",
+            "date": "2026-11-14",
+            "downloads": 1
           },
           {
             "category": "3.12",
@@ -46039,6 +46044,11 @@
             "downloads": 1732
           },
           {
+            "category": "3.13",
+            "date": "2026-11-14",
+            "downloads": 2102
+          },
+          {
             "category": "3.14",
             "date": "2026-07-31",
             "downloads": 1
@@ -46077,11 +46087,6 @@
             "category": "3.8",
             "date": "2026-11-04",
             "downloads": 1
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 6
           },
           {
             "category": "null",
@@ -46537,6 +46542,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 29
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "suphm",
@@ -46860,6 +46870,11 @@
             "downloads": 1732
           },
           {
+            "category": "Linux",
+            "date": "2026-11-14",
+            "downloads": 2103
+          },
+          {
             "category": "Windows",
             "date": "2026-07-21",
             "downloads": 2
@@ -46868,11 +46883,6 @@
             "category": "Windows",
             "date": "2026-07-31",
             "downloads": 2
-          },
-          {
-            "category": "null",
-            "date": "2026-05-17",
-            "downloads": 6
           },
           {
             "category": "null",
@@ -47328,6 +47338,11 @@
             "category": "null",
             "date": "2026-11-13",
             "downloads": 29
+          },
+          {
+            "category": "null",
+            "date": "2026-11-14",
+            "downloads": 4
           }
         ],
         "package": "suphm",
