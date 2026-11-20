@@ -29,20 +29,23 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Test the stats calculation
+        run: python -m unittest discover -s tests
+
       - name: Fetch PyPI statistics
         run: python fetch_stats.py
 
       - name: Check for changes
         id: check_changes
         run: |
-          git diff --quiet docs/data/stats.json || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet docs/data/stats.json docs/data/history.json || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push if changed
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add docs/data/stats.json
+          git add docs/data/stats.json docs/data/history.json
           git commit -m "Update PyPI stats - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git push
 
