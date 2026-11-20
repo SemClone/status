@@ -68,6 +68,9 @@ function renderSummaryCards(packages) {
         const lastDayWithout = recent.last_day_without_mirrors || 0;
         const lastWeekWithout = recent.last_week_without_mirrors || 0;
         const lastMonthWithout = recent.last_month_without_mirrors || 0;
+        const total = recent.total || 0;
+        const totalWithout = recent.total_without_mirrors || 0;
+        const totalSince = recent.total_since ? ` since ${recent.total_since}` : '';
 
         html += `
             <div class="package-card">
@@ -83,6 +86,10 @@ function renderSummaryCards(packages) {
                 <div class="stat-row">
                     <span class="stat-label">Last Month:</span>
                     <span class="stat-value">${formatNumber(lastMonth)} <span class="stat-detail">(${formatNumber(lastMonthWithout)} organic)</span></span>
+                </div>
+                <div class="stat-row" title="All downloads${totalSince}">
+                    <span class="stat-label">Total:</span>
+                    <span class="stat-value">${formatNumber(total)} <span class="stat-detail">(${formatNumber(totalWithout)} organic)</span></span>
                 </div>
             </div>
         `;

@@ -80,79 +80,109 @@ def fetch_system_stats(package: str) -> Dict[str, Any]:
     return fetch_json(url)
 
 
-def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Any]:
+CATEGORIES = ("with_mirrors", "without_mirrors")
+
+# pypistats.org only serves the last ~180 days from /overall, so a total summed
+# from one response is a rolling window. Every run merges its daily rows into
+# this file, and lifetime totals are summed from it instead.
+HISTORY_FILE = "docs/data/history.json"
+
+
+def load_history(path: str = HISTORY_FILE) -> Dict[str, Any]:
+    """Load the accumulated daily history.
+
+    A missing file is an empty history. A file that exists and cannot be read
+    raises: starting again from empty would silently shrink every total to
+    the 180-day window this file exists to get past.
     """
-    Calculate last_day, last_week, last_month, and total cumulative downloads from overall data.
-    Returns a dict with calculated values for both with_mirrors and without_mirrors.
+    try:
+        with open(path) as f:
+            history = json.load(f)
+    except FileNotFoundError:
+        return {"packages": {}}
+    if not isinstance(history.get("packages"), dict):
+        raise ValueError(f"{path} has no 'packages' object; refusing to overwrite it")
+    return history
+
+
+def save_history(history: Dict[str, Any], path: str = HISTORY_FILE) -> None:
+    with open(path, "w") as f:
+        json.dump(history, f, indent=1, sort_keys=True)
+        f.write("\n")
+
+
+def merge_overall_into_history(history: Dict[str, Any], package: str,
+                               overall_data: Dict[str, Any]) -> int:
+    """Merge one /overall response into the history. Returns rows merged.
+
+    A day already in the history is overwritten, because pypistats revises
+    recent days. A day absent from this response is kept, which is the point.
     """
-    result = {
-        "last_day": None,
-        "last_week": None,
-        "last_month": None,
-        "total": None,
-        "last_day_with_mirrors": None,
-        "last_week_with_mirrors": None,
-        "last_month_with_mirrors": None,
-        "total_with_mirrors": None,
-        "last_day_without_mirrors": None,
-        "last_week_without_mirrors": None,
-        "last_month_without_mirrors": None,
-        "total_without_mirrors": None
+    rows = (overall_data or {}).get("data") or []
+    pkg = history["packages"].setdefault(package, {c: {} for c in CATEGORIES})
+    merged = 0
+    for entry in rows:
+        category, date = entry.get("category"), entry.get("date")
+        if category in CATEGORIES and date:
+            pkg.setdefault(category, {})[date] = entry.get("downloads", 0) or 0
+            merged += 1
+    return merged
+
+
+def totals_from_history(history: Dict[str, Any], package: str) -> Dict[str, Any]:
+    """Lifetime totals for a package, from the accumulated history."""
+    pkg = history["packages"].get(package) or {}
+    with_m = pkg.get("with_mirrors") or {}
+    without_m = pkg.get("without_mirrors") or {}
+    dates = sorted(set(with_m) | set(without_m))
+    return {
+        "total": sum(with_m.values()),
+        "total_with_mirrors": sum(with_m.values()),
+        "total_without_mirrors": sum(without_m.values()),
+        "total_since": dates[0] if dates else None,
     }
 
-    if not overall_data or "data" not in overall_data:
+
+def _window(series: Dict[str, int], latest: str, days: int) -> int:
+    """Sum the calendar days (latest - days, latest]. Missing days count as 0."""
+    end = datetime.strptime(latest, "%Y-%m-%d").date()
+    start = end - timedelta(days=days)
+    return sum(v for d, v in series.items()
+               if start < datetime.strptime(d, "%Y-%m-%d").date() <= end)
+
+
+def calculate_metrics_from_overall(overall_data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Calculate last_day, last_week and last_month from one /overall response.
+
+    In pypistats, with_mirrors is every download and without_mirrors is the
+    subset that did not come from a mirror, so the headline figures are the
+    with_mirrors ones. Adding the two categories together counts every organic
+    download twice.
+
+    Windows are calendar days ending on the latest day in the data, so a
+    package with days of no downloads is not credited with older ones.
+    """
+    result = {f"{w}{suffix}": None
+              for w in ("last_day", "last_week", "last_month")
+              for suffix in ("", "_with_mirrors", "_without_mirrors")}
+
+    rows = (overall_data or {}).get("data") or []
+    series = {c: {} for c in CATEGORIES}
+    for entry in rows:
+        category, date = entry.get("category"), entry.get("date")
+        if category in CATEGORIES and date:
+            series[category][date] = series[category].get(date, 0) + (entry.get("downloads", 0) or 0)
+
+    dates = set(series["with_mirrors"]) | set(series["without_mirrors"])
+    if not dates:
         return result
+    latest = max(dates)
 
-    data = overall_data["data"]
-    if not data:
-        return result
-
-    # Group downloads by date and category
-    date_downloads_all = {}
-    date_downloads_with = {}
-    date_downloads_without = {}
-
-    for entry in data:
-        date = entry.get("date")
-        downloads = entry.get("downloads", 0)
-        category = entry.get("category", "")
-
-        if date:
-            # Total (all categories)
-            date_downloads_all[date] = date_downloads_all.get(date, 0) + downloads
-
-            # Split by category
-            if category == "with_mirrors":
-                date_downloads_with[date] = date_downloads_with.get(date, 0) + downloads
-            elif category == "without_mirrors":
-                date_downloads_without[date] = date_downloads_without.get(date, 0) + downloads
-
-    if not date_downloads_all:
-        return result
-
-    # Get the most recent dates
-    sorted_dates = sorted(date_downloads_all.keys(), reverse=True)
-    if not sorted_dates:
-        return result
-
-    # Calculate metrics for all categories combined
-    result["last_day"] = date_downloads_all[sorted_dates[0]]
-    result["last_week"] = sum(date_downloads_all.get(d, 0) for d in sorted_dates[:7])
-    result["last_month"] = sum(date_downloads_all.get(d, 0) for d in sorted_dates[:30])
-    result["total"] = sum(date_downloads_all.values())
-
-    # Calculate metrics for with_mirrors
-    result["last_day_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:1])
-    result["last_week_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:7])
-    result["last_month_with_mirrors"] = sum(date_downloads_with.get(d, 0) for d in sorted_dates[:30])
-    result["total_with_mirrors"] = sum(date_downloads_with.values())
-
-    # Calculate metrics for without_mirrors
-    result["last_day_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:1])
-    result["last_week_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:7])
-    result["last_month_without_mirrors"] = sum(date_downloads_without.get(d, 0) for d in sorted_dates[:30])
-    result["total_without_mirrors"] = sum(date_downloads_without.values())
-
+    for name, days in (("last_day", 1), ("last_week", 7), ("last_month", 30)):
+        for category in CATEGORIES:
+            result[f"{name}_{category}"] = _window(series[category], latest, days)
+        result[name] = result[f"{name}_with_mirrors"]
     return result
 
 
@@ -165,6 +195,8 @@ def main():
         "packages": {}
     }
 
+    history = load_history()
+
     for package in PACKAGES:
         print(f"Fetching stats for {package}...")
 
@@ -173,69 +205,47 @@ def main():
         overall = fetch_overall_stats(package)
         time.sleep(1.0)
 
-        # Calculate all metrics from overall data
-        calculated_metrics = calculate_metrics_from_overall(overall)
+        merged = merge_overall_into_history(history, package, overall)
+        calculated = calculate_metrics_from_overall(overall)
+        api = (recent or {}).get("data") or {}
 
-        # If recent failed but we have overall data, create recent from calculated metrics
-        if not recent or "data" not in recent:
-            if any(v is not None for v in calculated_metrics.values()):
-                print(f"  ℹ️  Using calculated metrics (API unavailable)")
-                recent = {
-                    "data": {
-                        "last_day": calculated_metrics.get("last_day", 0),
-                        "last_week": calculated_metrics.get("last_week", 0),
-                        "last_month": calculated_metrics.get("last_month", 0),
-                        "total": calculated_metrics.get("total", 0),
-                        "last_day_with_mirrors": calculated_metrics.get("last_day_with_mirrors", 0),
-                        "last_week_with_mirrors": calculated_metrics.get("last_week_with_mirrors", 0),
-                        "last_month_with_mirrors": calculated_metrics.get("last_month_with_mirrors", 0),
-                        "total_with_mirrors": calculated_metrics.get("total_with_mirrors", 0),
-                        "last_day_without_mirrors": calculated_metrics.get("last_day_without_mirrors", 0),
-                        "last_week_without_mirrors": calculated_metrics.get("last_week_without_mirrors", 0),
-                        "last_month_without_mirrors": calculated_metrics.get("last_month_without_mirrors", 0),
-                        "total_without_mirrors": calculated_metrics.get("total_without_mirrors", 0)
-                    },
-                    "package": package,
-                    "type": "recent_downloads"
-                }
-                recent["data"]["_fallback_warning"] = {
-                    "message": "All metrics calculated from /overall data (API unavailable)"
-                }
-        else:
-            # Check for discrepancies and fix them
-            discrepancies = {}
-
-            for metric in ["last_day", "last_week", "last_month"]:
-                api_value = recent["data"].get(metric, 0)
-                calculated_value = calculated_metrics.get(metric)
-
-                if calculated_value is not None and api_value != calculated_value:
-                    discrepancies[metric] = {
-                        "api_value": api_value,
-                        "calculated_value": calculated_value
-                    }
-                    recent["data"][metric] = calculated_value
-
-            # Always add mirror-specific metrics and totals
-            recent["data"]["last_day_with_mirrors"] = calculated_metrics.get("last_day_with_mirrors", 0)
-            recent["data"]["last_week_with_mirrors"] = calculated_metrics.get("last_week_with_mirrors", 0)
-            recent["data"]["last_month_with_mirrors"] = calculated_metrics.get("last_month_with_mirrors", 0)
-            recent["data"]["total_with_mirrors"] = calculated_metrics.get("total_with_mirrors", 0)
-            recent["data"]["last_day_without_mirrors"] = calculated_metrics.get("last_day_without_mirrors", 0)
-            recent["data"]["last_week_without_mirrors"] = calculated_metrics.get("last_week_without_mirrors", 0)
-            recent["data"]["last_month_without_mirrors"] = calculated_metrics.get("last_month_without_mirrors", 0)
-            recent["data"]["total_without_mirrors"] = calculated_metrics.get("total_without_mirrors", 0)
-            recent["data"]["total"] = calculated_metrics.get("total", 0)
-
-            # Report discrepancies
+        data = {}
+        warnings = []
+        if calculated["last_day"] is not None:
+            data.update(calculated)
+            # /recent counts without mirrors; compare it to the same figure.
+            discrepancies = {
+                m: {"api_value": api[m], "calculated_value": calculated[f"{m}_without_mirrors"]}
+                for m in ("last_day", "last_week", "last_month")
+                if m in api and api[m] != calculated[f"{m}_without_mirrors"]
+            }
             if discrepancies:
                 disc_msgs = [f"{k}({v['api_value']}→{v['calculated_value']})"
-                            for k, v in discrepancies.items()]
-                print(f"  ⚠️  Discrepancy: {', '.join(disc_msgs)}")
-                recent["data"]["_discrepancy_warning"] = {
+                             for k, v in discrepancies.items()]
+                print(f"  ⚠️  /recent disagrees with /overall (organic): {', '.join(disc_msgs)}")
+                data["_discrepancy_warning"] = {
                     "discrepancies": discrepancies,
-                    "message": "Metrics calculated from /overall data due to API staleness"
+                    "message": "/recent (without mirrors) differs from /overall; /overall used",
                 }
+        elif api:
+            # No /overall today. /recent only has without-mirrors figures, so
+            # say so rather than present them as the with-mirrors headline.
+            for m in ("last_day", "last_week", "last_month"):
+                data[m] = api.get(m)
+                data[f"{m}_without_mirrors"] = api.get(m)
+                data[f"{m}_with_mirrors"] = None
+            warnings.append("/overall unavailable: last_* are without-mirrors figures from /recent")
+        else:
+            warnings.append("/overall and /recent both unavailable: no window metrics this run")
+
+        if not merged:
+            warnings.append("/overall unavailable: totals are from history as of the previous run")
+            print("  ⚠️  No /overall data; totals carried from history")
+        data.update(totals_from_history(history, package))
+        if warnings:
+            data["_fallback_warning"] = {"message": "; ".join(warnings)}
+
+        recent = {"data": data, "package": package, "type": "recent_downloads"}
 
         package_stats = {
             "name": package,
@@ -246,6 +256,9 @@ def main():
         }
 
         all_stats["packages"][package] = package_stats
+
+    save_history(history)
+    print(f"✓ History saved to {HISTORY_FILE}")
 
     # Save to JSON file
     output_file = "docs/data/stats.json"
@@ -265,7 +278,8 @@ def main():
             last_month = recent["data"].get("last_month") or 0
             total = recent["data"].get("total") or 0
             total_without_mirrors = recent["data"].get("total_without_mirrors") or 0
-            print(f"{package:20} - Day: {last_day:,} | Week: {last_week:,} | Month: {last_month:,} | Total: {total:,} (organic: {total_without_mirrors:,})")
+            since = recent["data"].get("total_since") or "-"
+            print(f"{package:20} - Day: {last_day:,} | Week: {last_week:,} | Month: {last_month:,} | Total since {since}: {total:,} (organic: {total_without_mirrors:,})")
         else:
             print(f"{package:20} - No data available")
 
