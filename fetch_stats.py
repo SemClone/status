@@ -22,8 +22,6 @@ PACKAGES = [
     "src2purl",
     "vulnq",
     "ospac",
-    "mcp-semclone",
-    "ossval",
     "ossbomer",
     "suphm",
 ]
